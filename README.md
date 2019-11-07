@@ -1,5 +1,7 @@
-# share-bt-c
-Share bài tập C\C++
-     - Hiện tại chỉ có C++.  Ai muốn dùng thì thay lại chỗ lệnh:
-          "cout <<" bằng "printf"
-          "cin >>" bằng scanf
+# share bài tập C/C++
+Share bài tập C\C++ tham khảo. 
+
+- Hiện tại chỉ có C++. Ai muốn dùng(chạy code) thì thay lại chỗ lệnh:
+     - "cout <<" bằng "printf". 
+     - "cin >>" bằng scanf. 
+- Mình sẽ cập nhật C sau khi có thời gian. 
