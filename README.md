@@ -1,4 +1,4 @@
-# share-bt-c
+# share bài tập C/C++
 Share bài tập C\C++ tham khảo. 
 
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) thì thay lại chỗ lệnh:
