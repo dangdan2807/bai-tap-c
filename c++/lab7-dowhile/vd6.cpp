@@ -10,11 +10,12 @@ int main()
 	#if 1
 	do
 	{
-		system("cls");
 		cout << "Nhap ID: ";
 		getline(cin, id);
 		cout << "Nhap password: ";
 		getline(cin, password);
+		if( id != ID || password != PASSWORD)
+			cout <<"Sai id hoac password, nhap lai.\n";
 	}while( id != ID || password != PASSWORD);
 	cout <<"Dang nhap hop le, chuyen den hop thu";
 	#endif

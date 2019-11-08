@@ -10,15 +10,12 @@ int main()
 		if(A<0)
 			cout << "DK 0<A<2, nhap lai: ";
 	}while( A<0);
-	int n=2;
-	float s=1;
-	while(s<A)
-	//do
-	{
-		s+=(1.0/n);
+	int n=0;
+	float s=0;
+	while(A>=s){
 		n++;
-		cout << A << " | " << s << " | "<< n << "\n";
-	}//while(A>s);
+		s+=(1.0/n);
+	}
 	cout <<"Ket qua la: "<< n;
 	return 0;
 }
