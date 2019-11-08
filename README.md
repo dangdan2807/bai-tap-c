@@ -11,3 +11,5 @@ Share bài tập C\C++ tham khảo.
     - lab 2
     - lab 3
     - lab 4
+    - lab 5
+    - lab 6
