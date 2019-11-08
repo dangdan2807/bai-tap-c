@@ -4,14 +4,14 @@ using namespace std;
 int main()
 {
 	int n, s1=1, s2=1;
-	cout << "Nhap so phan tu N: ";
+	printf( "Nhap so phan tu N: ");
 	int a=1;
 	do
 	{
-		cin >> n;
+		scanf("%d",&n);
 		if(n<=1)
 		{
-			cout <<"N phai la so duong, vui long nhap lai: ";
+			printf("N phai la so duong, vui long nhap lai: ");
 		}
 	}while(n<1);
 	while(a<=n)
@@ -22,10 +22,10 @@ int main()
 			s2=s2*a;
 		a+=1;
 	}
-	cout << "Ket qua la: \n";
+	printf("Ket qua la: \n");
 	if(n%2==1)
-		cout << "Tich cac so le s1= " << s1 << "\n";
+		printf("Tich cac so le s1= %d\n", s1);
 	else
-		cout << "Tich cac so chan s2= " << s2 << "\n";
+		printf("Tich cac so le s2= %d\n", s2);
 	return 0;
 }

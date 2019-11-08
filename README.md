@@ -9,7 +9,5 @@ Share bài tập C\C++ tham khảo.
 - Mình sẽ cập nhật C sau khi có thời gian.
   - Đã cập nhật tạm vài bài của: 
     - lab 2
-    - lab 3
-    - lab 4
-    - lab 5
-    - lab 6
+    - ... 
+    - lab 7
