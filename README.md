@@ -5,4 +5,5 @@ Share bài tập C\C++ tham khảo.
   - "cout <<" bằng "printf". 
   - "cin >>" bằng "scanf". 
   - hoặc để như thế chạy luôn cũng được không sao cả.
-  - C++ cơ bản đã xong. Sẽ có phần mở rộng về con trỏ, đệ quy,  ...(kể từ phần mở rộng sẽ sử dụng các hàm thư viện dựng sẵn). 
+  - C++ cơ bản đã xong. 
+  - Sẽ có phần mở rộng về con trỏ, đệ quy,  ...(kể từ phần mở rộng sẽ sử dụng các hàm thư viện dựng sẵn). 
