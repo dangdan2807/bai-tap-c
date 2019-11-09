@@ -1,14 +1,8 @@
 ﻿﻿# share bài tập C/C++
 Share bài tập C\C++ tham khảo. 
 
-- Hiện tại chỉ có C++. Ai muốn dùng(chạy code) thì thay lại chỗ lệnh:
+- Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
   - "cout <<" bằng "printf". 
   - "cin >>" bằng "scanf". 
   - hoặc để như thế chạy luôn cũng được không sao cả.
   - C++ cơ bản đã xong. Sẽ có phần mở rộng về con trỏ, đệ quy,  ...(kể từ phần mở rộng sẽ sử dụng các hàm thư viện dựng sẵn). 
-- Mình sẽ cập nhật C sau khi có thời gian.
-  - Đã cập nhật tạm vài bài của: 
-    - lab 2
-    - ... 
-    - lab 8
-    - C sẽ không có phần mở rộng(để khuyển khích các bạn sử dụng C++). 

@@ -6,7 +6,7 @@ int main()
 	int a, b, c;
 	float s, Area;
 	cout << "Nhap 3 canh a, b, c: ";
-	scanf("%d%d%d", &a, &b, &c);
+	cin >> a >> b >> c;
 	if(a+b>c && b+c>a && c+a>b)
 	{
 		if(a*a+b*b==c*c && b*b+c*c==a*a && c*c+a*a==b*b)

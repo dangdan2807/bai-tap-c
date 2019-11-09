@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <stdio.h>
 using namespace std;
 void xuatmang(int a[], int n);
@@ -10,14 +10,14 @@ int main()
 	{
         mang[i]=i;
 	}
-	printf("Gia tri cua mang A la: \n");
+	cout << "Gia tri cua mang 1 la: \n";
 	xuatmang(mang, n);
 	int mang2[n];
 	for(int i=0; i<n; i++)
 	{
         mang2[i]=mang[i]+10;
 	}
-	printf("Gia tri cua mang A la: \n");
+	cout << "Gia tri cua mang 2 la: \n";
 	xuatmang(mang2, n);
 	return 0;
 }
@@ -25,6 +25,6 @@ void xuatmang(int a[], int n)
 {
 	for(int i=0; i<n; i++)
 	{
-        printf("Mang[%d]= %d\n", i, a[i]);
+        cout << "Mang["<< i << "]= " <<a[i] << endl;
 	}
 }

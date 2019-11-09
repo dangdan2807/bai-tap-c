@@ -1,4 +1,6 @@
 ﻿# share bài tập C/C++
 Share bài tập C\C++ tham khảo. 
 
-- Hiện tại mình có 11 lab:
+- Cơ bản gồm từ lab 2 đến lab 11.
+- Nâng cao gồm: 
+  - Con trỏ.

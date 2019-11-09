@@ -15,11 +15,11 @@ int main()
 	for(int i=0;i<n;)
 	{
 		do{
-			printf("mang[%d]=", i);
+			cout << "mang[" << i << "]=";
 			cin >> mang[i];
 			check=mang[i];
 			if(check<a || check>b)
-				printf("%d <= mang[%d] <= %d\n", a, i, b);
+				cout << a << " <= mang[" << i << "] <= " << b;
 			else
 				i++;
 		}while(check>a && check<b);

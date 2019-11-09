@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <stdio.h>
 #include <cstdlib>
 #include <ctime>
@@ -7,27 +7,30 @@ void xuatmang(int a[], int n);
 void sapxep(int a[], int n);
 int main()
 {
-	int mang[50];
-	int n=50;
-	/*do{
-		cout <<"Nhap so phan tu cua mang: ";
+	int n;
+	cout <<"Nhap so phan tu cua mang: ";
+	do{
 		cin >> n;
-	}while(n<0 && n>100);
-	*/srand(time(NULL));
-	for (int i = 0; i < 50; ++i)
+		if(n<0 || n>100)
+			cout << "\n 0<= n < 100, nhap lai: ";
+	}while(n<0 || n>100);
+	//srand(time(NULL));
+	int mang[n];
+	for (int i = 0; i<n; ++i)
 	{
-		mang[i]=rand()%99;
-		
+		cout <<"mang[" << i << "]= ";
+		//mang[i]=rand()%99;
+		cin >> mang[i];
 	}
 	sapxep(mang, n);
-	xuatmang(mang, 50);
+	xuatmang(mang, n);
 	return 0;
 }
 void xuatmang(int a[], int n)
 {
 	for (int i = 0; i < n; ++i)
 	{
-		printf("mang[%d]= %d\n",i, a[i]);
+		cout << "mang[" << i << "]= " << a[i] << endl;
 	}
 }
 void sapxep(int a[], int n)

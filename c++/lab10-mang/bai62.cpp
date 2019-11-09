@@ -11,7 +11,7 @@ int main()
 	}
 	for(int i=0; i<n; i++)
 	{
-        printf("Mang[%d]= %d\n", i, mang[i]);
+        cout <<"Mang[" << i << "]= " << mang[i] << endl;
 	}
 	return 0;
 }

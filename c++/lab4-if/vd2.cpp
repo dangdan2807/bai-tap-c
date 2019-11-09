@@ -11,6 +11,6 @@ int main()
 	else
 		ngaycong=ngay;
 	luong=ngaycong*300000;
-	printf("Luong cua %d ngay lam viec la: %d", ngaycong, luong);
+	cout << "Luong cua "<< ngaycong << " ngay lam viec la: " << luong;
 	return 0;
 }
