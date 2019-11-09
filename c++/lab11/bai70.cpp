@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -40,6 +40,9 @@ int main()
     cout <<"Nhung vi tri co gia tri trung voi gia tri "<< x <<" la: \n";
     dem(mang, hang, cot, x);
     xuatmang(mang, hang, cot);
+    cout <<"sap xep" << endl;
+    sapxep(mang, hang, cot);
+    xuatmang(mang, hang, cot);
     return 0;
 }
 void nhapmang(int a[HANG_MAX][COT_MAX],  int hang, int cot)
@@ -78,5 +81,14 @@ void dem(int a[HANG_MAX][COT_MAX],  int hang, int cot, int x)
 }
 void sapxep(int a[HANG_MAX][COT_MAX], int hang, int cot)
 {
-
+	int temp;
+	for(int k = 0; k<hang ; k++)
+     	for(int i = 0; i<cot-1 ; i++)
+      		for(int j = cot-1; j >i ; j--)
+      			if(a[k][j]<a[k][j-1])
+     				{
+         					int temp = a[k][j];
+         					a[k][j] = a[k][j-1];
+         					a[k][j-1] = temp;
+     				}
 }

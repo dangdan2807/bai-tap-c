@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 void nhapmang (int c[], int &a, int &b, int &n)
 {
 	printf("nhap a :"); 
