@@ -5,9 +5,10 @@ Share bài tập C\C++ tham khảo.
   - "cout <<" bằng "printf". 
   - "cin >>" bằng "scanf". 
   - hoặc để như thế chạy luôn cũng được không sao cả.
-  - Đã làm đến bài 70 thuộc lab 11 tổ chức mảng.
+  - C++ cơ bản đã xong. Sẽ có phần mở rộng về con trỏ, đệ quy,  ...(kể từ phần mở rộng sẽ sử dụng các hàm thư viện dựng sẵn). 
 - Mình sẽ cập nhật C sau khi có thời gian.
   - Đã cập nhật tạm vài bài của: 
     - lab 2
     - ... 
     - lab 8
+    - C sẽ không có phần mở rộng(để khuyển khích các bạn sử dụng C++). 
