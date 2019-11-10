@@ -8,4 +8,5 @@
 - Bài 5: Tráo đổi giá trị bởi sử dụng con trỏ (sử dụng biến thứ 3) 
 - Bài 6: Tráo đổi giá trị bởi sử dụng con trỏ(không sử dụng biến thứ 3) 
 - Bài 7: Tính tổng các phần tử mảng bởi sử dụng con trỏ. 
-- Bài 8: Tìm độ dài chuỗi bởi sử dụng con trỏ. 
+- Bài 8: Tìm độ dài chuỗi bởi sử dụng con trỏ.
+- Bài 9: Như bài 8 nhưng sẽ không dùng hàm. 
