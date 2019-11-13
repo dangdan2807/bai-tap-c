@@ -1,4 +1,4 @@
-﻿﻿# share bài tập C/C++
+# Share bài tập C/C++
 ---
 Share bài tập C\C++ tham khảo. 
 
