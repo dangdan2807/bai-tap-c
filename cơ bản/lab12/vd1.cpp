@@ -7,7 +7,7 @@ int main()
     int sotien;
     cout <<"Nhap so tien: ";
     do{
-        //NHập số ti
+        //Nhập số tiền
         cin >> sotien;
         if(sotien<0)
             cout <<"so tien >0, nhap lai: ";
@@ -19,6 +19,7 @@ int main()
         temp = (temp * 10) + (sotien % 10);
         sotien /= 10;
     }
+    //đọc só tiền
     while(temp != 0) {
         switch(temp % 10) {
             case 0: cout << "Khong ";break;
