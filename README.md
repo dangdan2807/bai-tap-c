@@ -6,13 +6,14 @@ Share bài tập C\C++ tham khảo.
 - Cơ bản:
   - Toán tử: lab 2 và 3.
   - Cấu điều kiện: 
-    - if, else: (lab 4) 
+    - if, else: lab 4
     - Switch: lab 5
   - Vòng lặp: 
     - for: lab 6
     - do while: lab 7
   - Hàm: lab 8 và 9
   - Mảng: lab 10 và 11
+  - Bài tập tổng hợp: lab 12
 - Nâng cao:
   - Con trỏ
   - Đệ quy
@@ -26,4 +27,5 @@ Share bài tập C\C++ tham khảo.
   - hoặc để như thế chạy luôn cũng được không sao cả.
 - Ngoài các phần trên các bạn nên tự tìn hiểu thêm về:
   - Con trỏ và cấp phát động biến. 
-  - Con trỏ và cấp phát động mảng. 
+  - Con trỏ và cấp phát động mảng(không thay đổi được kích thước).
+  - Vecto (Con trỏ và cấp phát động mảng thay đổi kích thước được).
