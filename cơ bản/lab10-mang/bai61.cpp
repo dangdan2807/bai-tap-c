@@ -23,6 +23,6 @@ int main()
             getchar();
     }
     sum=sum/i;
-    cout <<"Trung binh cua mang la: " << sum <<, endl;
+    cout <<"Trung binh cua mang la: " << sum << endl;
     return 0;
 }
