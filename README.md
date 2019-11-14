@@ -1,4 +1,4 @@
-# Share bài tập C/C++
+﻿# Share bài tập C/C++
 ---
 Share bài tập C\C++ tham khảo. 
 
@@ -18,6 +18,7 @@ Share bài tập C\C++ tham khảo.
   - Con trỏ
   - Đệ quy
   - Cấp phát động
+  - Thư viện array (mảng)
 - Hướng đối tượng:(đang cập nhật) 
 ---
 ## Lưu ý
