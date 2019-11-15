@@ -3,7 +3,8 @@
 using namespace std;
 void nhapdiem(int a[], int n);
 void xuatdiem(int a[], int n);
-void xeploai (int a);
+char xeploai (int a);
+void sapxep(int a[], int n);
 void xoasv(int a[], int &n, int k);
 int main()
 {
@@ -17,9 +18,13 @@ int main()
 	int diem[n];
 	nhapdiem(diem, n);
 	xuatdiem(diem, n);
-	printf("\n-------------------------------------\n");
-	printf("|\tSTT\t|\tDIEM\t|\tXEP LOAI\t|\n");
-	printf("-------------------------------------\n");
+	sapxep(diem, n);	printf("\n-----------------------------------------\n");
+	printf("|\tSTT\t\t|\tDIEM\t|\tXEP LOAI\t|\n");
+	printf("-----------------------------------------\n");
+	for(int i=0; i<n; i++){
+		printf("|\t %d \t\t|\t %d \t\t|\t\t %c \t\t|\n", i, diem[i], xeploai(diem[i]));
+		printf("-----------------------------------------\n");
+	}
 	int k;
 	xoasv(diem, n, k);
 	xuatdiem(diem, n);
@@ -43,16 +48,30 @@ void xuatdiem(int a[], int n)
 	}
 }
 
-void xeploai(int a)
+char xeploai(int a)
 {
-	if(a>=0 || a<5)
-		printf("A");
-	else if(a>=5 || a<7)
-		printf("B");
-	else if(a>=7 || a<9)
-		printf("C");
-	else if(a>=9 || a<=10)
-		printf("D");
+	if(a>=0 && a<5)
+		return 'A';
+	if(a>=5 && a<7)
+		return 'B';
+	if(a>=7 && a<9)
+		return 'C';
+	if(a>=9 && a<=10)
+		return 'D';
+}
+
+void sapxep(int a[], int n)
+{
+	int temp;
+	for(int i=0; i<n; i++){
+		for(int j=0; j<n; j++){
+			if(a[i]>a[j]){
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
 }
 
 void xoasv(int a[], int &n, int k)
