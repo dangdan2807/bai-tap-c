@@ -4,20 +4,21 @@
 int nhapid(int &id);
 int sonam_kt(int &kt);
 int soluong(int &luong);
+int tinh(int &thuong);
 int main()
 {
 	char chon;
-	int id, kinhnghiem, luong;
+	int id, kinhnghiem, luong, thuong;
 	//do{
-		nhapid(id);
+	/*	nhapid(id);
 		sonam_kt(kinhnghiem);
-		soluong(luong);
+		soluong(luong);*/
 		printf("\nBan muon tiep tuc Y/N: ");
 		do{
 			scanf("%c", &chon);
-			if(chon != 'Y' || chon != 'y' || chon != 'N' || chon != 'n')
+			if(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n')
 				printf("nhap sai, nhap lai: ");
-		}while(chon != 'Y' || chon != 'y' || chon != 'N' || chon != 'n');
+		}while(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n');
 	//}while();
 	
 	return 0;
