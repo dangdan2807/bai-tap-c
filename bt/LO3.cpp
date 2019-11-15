@@ -1,26 +1,38 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 
 int nhapid(int &id);
-int sonam_kt(int &kt);
+int sonam_kt(int &kinhnghiem);
 int soluong(int &luong);
-int tinh(int &thuong);
+float tienthuong(int kinhnghiem, int sotuan, int luong, float &thuong);
+void xuat(int id, float thuong);
 int main()
 {
+    int so_nhanvien=0;
+	float tong_thuong=0;
 	char chon;
-	int id, kinhnghiem, luong, thuong;
-	//do{
-	/*	nhapid(id);
+	do{
+    	int id, kinhnghiem=0, luong=0;
+	    float thuong=0;
+		nhapid(id);
 		sonam_kt(kinhnghiem);
-		soluong(luong);*/
+		soluong(luong);
+		int sotuan;
+		printf("Nhap so tuan lam viec: ");
+        scanf("%d", &sotuan);
+		tienthuong(kinhnghiem, sotuan, luong, thuong);
+		xuat(id, thuong);
 		printf("\nBan muon tiep tuc Y/N: ");
 		do{
-			scanf("%c", &chon);
-			if(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n')
-				printf("nhap sai, nhap lai: ");
+		    scanf("%c", &chon);
+    		if(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n')
+    			printf("nhap sai, nhap lai: ");
 		}while(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n');
-	//}while();
-	
+	    so_nhanvien++;
+	    tong_thuong+=thuong;
+	}while(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n');
+	printf("\nTong so nhan vien la: %d\n", so_nhanvien);
+	printf("Tong so thuong la: %f", tong_thuong);
 	return 0;
 }
 int nhapid(int &id)
@@ -34,15 +46,15 @@ int nhapid(int &id)
 	return id;
 }
 
-int sonam_kt(int &kt)
+int sonam_kt(int &kinhnghiem)
 {
 	printf("Nhap so nam kinh nghiem: ");
 	do{
-		scanf("%d", &kt);
-		if(kt<0 || kt >50)
+		scanf("%d", &kinhnghiem);
+		if(kinhnghiem<0 || kinhnghiem >50)
 			printf("0 <= So nam kinh nghiem <= 50, nhap lai: ");
-	}while(kt<0 || kt>50);
-	return kt;
+	}while(kinhnghiem<0 || kinhnghiem>50);
+	return kinhnghiem;
 }
 
 int soluong(int &luong)
@@ -54,4 +66,18 @@ int soluong(int &luong)
 			printf("0 <= ID <= 50, nhap lai: ");
 	}while(luong<0 && luong>5*pow(10, 6));
 	return luong;
+}
+
+float tienthuong(int kinhnghiem, int sotuan, int luong, float &thuong)
+{   
+    thuong=sotuan*luong*1.5;
+    if(kinhnghiem>=10)
+        thuong+=2*pow(10, 6);
+    return thuong;
+}
+
+void xuat(int id, float thuong)
+{
+    printf("ID nhan vien la: %d\n", id);
+    printf("Tien thuong la: %f\n", thuong);
 }
