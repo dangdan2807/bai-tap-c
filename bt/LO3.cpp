@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <math.h>
 
 int nhapid(int &id);
@@ -25,12 +25,12 @@ int main()
 		printf("\nBan muon tiep tuc Y/N: ");
 		do{
 		    scanf("%c", &chon);
-    		if(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n')
-    			printf("nhap sai, nhap lai: ");
+		    if(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n')
+    				printf("nhap sai, nhap lai: ");
 		}while(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n');
 	    so_nhanvien++;
 	    tong_thuong+=thuong;
-	}while(chon != 'Y' && chon != 'y' && chon != 'N' && chon != 'n');
+	}while(chon == 'Y' || chon == 'y');
 	printf("\nTong so nhan vien la: %d\n", so_nhanvien);
 	printf("Tong so thuong la: %f", tong_thuong);
 	return 0;
@@ -42,7 +42,7 @@ int nhapid(int &id)
 		scanf("%d", &id);
 		if(id <1000 || id >9999)
 			printf("1000 <= ID <= 9999, nhap lai: ");
-	}while(id<1000 && id>9999);
+	}while(id<1000 || id>9999);
 	return id;
 }
 
