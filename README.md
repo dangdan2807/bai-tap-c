@@ -1,5 +1,5 @@
 ﻿# Share bài tập C/C++
----
+
 Share bài tập C\C++ tham khảo. 
 
 ## Gồm có 3 phần:
@@ -20,7 +20,8 @@ Share bài tập C\C++ tham khảo.
   - Cấp phát động
   - Thư viện array (mảng)
 - Hướng đối tượng:(đang cập nhật) 
----
+
+
 ## Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
   - "cout <<" bằng "printf". 
