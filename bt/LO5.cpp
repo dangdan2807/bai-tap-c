@@ -36,7 +36,11 @@ void nhapdiem(int a[], int n)
 	printf("\tNHAP DIEM\n");
 	for(int i=0; i<n; i++){
 		printf("Sinh vien thu %d: ", i+1);
-		scanf("%d", &a[i]);
+		do{
+			scanf("%d", &a[i]);
+			if(a[i] <0 || a[i] >10)
+				printf("0<= diem <= 10, nhap lai: ");
+		}while(a[i] <0 || a[i] >10);
 	}
 }
 
