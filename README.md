@@ -13,6 +13,7 @@ Share bài tập C\C++ tham khảo.
     - do while: lab 7
   - Hàm: lab 8 và 9
   - Mảng: lab 10 và 11
+  - Struct
   - Bài tập tổng hợp: lab 12
 - Nâng cao:
   - Con trỏ
