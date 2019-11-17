@@ -13,11 +13,12 @@ int main()
 	int n;
 	cout <<"Nhap so sach: ";
 	cin >> n;
-	fflush(stdin);
+	//xoa bo nho dep nhap bang cin
+	cin.ignore(32676, '\n');
 	//Nhap thong tin sach
-	book sach[n];
+	book sach[10];
 	for(int i=0; i<n; i++){
-		cout <<"Nhap thong tin sach " << i+1<<":\n";
+		cout <<"Nhap thong tin sach:\n";
 		cout <<"Nhap ten sach: ";
 		fflush(stdin);
 		gets(sach[i].tensach);
@@ -27,7 +28,7 @@ int main()
 	}
 	//xuat thong tin sach
 	for(int i=0; i<n; i++){
-		cout <<"Thong tin sach " << i+1<<":\n";
+		cout <<"Thong tin sach:\n";
 		cout <<"Ten sach: " <<sach[i].tensach <<"\n";
 		cout <<"Ten tac gia: " <<sach[i].tacgia <<"\n";
 	}
