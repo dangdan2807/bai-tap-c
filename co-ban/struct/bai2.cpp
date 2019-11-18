@@ -8,7 +8,7 @@ struct phanso
 	int tuso;
 	int mauso;
 };
-//khai báo hàm cộng phân số với kiển dữ liệu vừa định nghĩa là phanso
+//khai báo hàm sum (cộng phân số) với kiển dữ liệu vừa định nghĩa là phanso
 phanso sum(phanso, phanso);
 
 int main() {

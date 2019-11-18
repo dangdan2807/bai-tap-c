@@ -6,7 +6,7 @@ using namespace std;
 #define SIZE 50
 
 struct sinhvien {
-    string name;
+    char name[50];
     int mssv;
     int diem[3];
 };
@@ -24,9 +24,10 @@ int main() {
     }while(n<0);
     /* Nhập tên và MSSV*/
     for (int i = 0; i < n; i++) {
-        cout <<"\nNhap ten va ma sv cho sinh vien: ";
+        cout <<"\nNhap ten sinh vien: ";
         cin.ignore();
-        getline(cin, sv[i].name);
+        gets(sv[i].name);
+        cout <<"Nhap MSSV: ";
         cin >>sv[i].mssv;
     }
 
