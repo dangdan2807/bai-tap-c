@@ -9,4 +9,4 @@ Bài tập phần struct
    - Nhap phan so 1 (tuso mauso): 1 2
    - Nhap phan so 1 (tuso mauso): 2 5
    - Ket qua: 9/10
- - **Bài 3:** Sử dụng Struct trong C tạo cấu trúc sinh viên gồm các thông tin: tên sinh viên, mã sinh viên và tên môn học. Nhập thông tin các sinh viên và sau đó in các thông tin này trên màn hình.
+ - **Bài 3:** Sử dụng Struct trong C tạo cấu trúc sinh viên gồm các thông tin: tên sinh viên, mã sinh viên và điểm thi môn học(phải có tên môn học và được nhập từ bàn phím). Nhập thông tin các sinh viên và sau đó in các thông tin này trên màn hình.
