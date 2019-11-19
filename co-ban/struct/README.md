@@ -14,5 +14,5 @@ Bài tập phần struct
  - **Bài 5:** Tìm kích cỡ của Struct
 Giả sử một Struct sinh viên gồm: tên sinh viên (name), mã sinh viên (roll), điểm thi (mark) thì ta sẽ có:
 Kích cỡ của Struct = sizeof(roll) + sizeof(name) + sizeof(mark).
- - **Bài 5:** Sắp xếp các Struct dựa vào bất kỳ phần tử nào của Struct
+ - **Bài 6:** Sắp xếp các Struct dựa vào bất kỳ phần tử nào của Struct
 Giả sử một giải đấu thể thao sinh viên đấu vòng tròn có 10 sinh viên tham gia. Mỗi sinh viên thuộc một đội khác nhau và sinh viên có các thông tin: tên đội (tname), tên sinh viên (pname), điểm số (avg). Khai báo một mảng các sinh viên. Yêu cầu là hãy sắp xếp các sinh viên này dựa trên bất kỳ tiêu chí nào ở trên (ví dụ sắp xếp theo tên đội, tên sinh viên hoặc điểm số đạt được).
