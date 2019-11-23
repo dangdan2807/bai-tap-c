@@ -18,7 +18,7 @@ int main()
 	//Nhap thong tin sach
 	book sach[10];
 	for(int i=0; i<n; i++){
-		cout <<"Nhap thong tin sach:\n";
+		cout <<"\nNhap thong tin sach " <<i+1;
 		cout <<"Nhap ten sach: ";
 		fflush(stdin);
 		gets(sach[i].tensach);
@@ -28,7 +28,7 @@ int main()
 	}
 	//xuat thong tin sach
 	for(int i=0; i<n; i++){
-		cout <<"Thong tin sach:\n";
+		cout <<"Thong tin sach " <<i+1 <<"\n";
 		cout <<"Ten sach: " <<sach[i].tensach <<"\n";
 		cout <<"Ten tac gia: " <<sach[i].tacgia <<"\n";
 	}
