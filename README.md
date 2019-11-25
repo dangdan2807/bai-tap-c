@@ -15,13 +15,15 @@ Share bài tập C\C++ tham khảo.
   - Mảng: lab 10 và 11
   - Struct
   - Bài tập tổng hợp: lab 12
-- Nâng cao:
+- Nâng cao(- hướng đối tượng):
   - Con trỏ
   - Đệ quy
   - Cấp phát động
   - Thư viện array (mảng)
-- Hướng đối tượng:(đang cập nhật) 
-
+  - Hàm inline(tự tìm hiểu nha)
+  - Thư viện Vector(đang cập nhật)
+  - Class
+  
 
 ## Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
@@ -32,3 +34,8 @@ Share bài tập C\C++ tham khảo.
   - Con trỏ và cấp phát động biến. 
   - Con trỏ và cấp phát động mảng(không thay đổi được kích thước).
   - Vecto (Con trỏ và cấp phát động mảng thay đổi kích thước được).
+
+### Các mode
+
+Mode  | Ý nghĩa | Nếu tệp không tồn tại
+---------  | :----------:  | :----------------------------------: |
