@@ -15,13 +15,12 @@ Share bài tập C\C++ tham khảo.
   - Mảng: lab 10 và 11
   - Struct
   - Bài tập tổng hợp: lab 12
-- Nâng cao:
+- Nâng cao(bao gồm hướng đối tượng):
   - Con trỏ
   - Đệ quy
   - Cấp phát động
   - Thư viện array (mảng)
-- Hướng đối tượng:(đang cập nhật) 
-
+  - Thư viện vector(cập nhật sau)
 
 ## Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
