@@ -21,7 +21,9 @@ Share bài tập C\C++ tham khảo.
   - Cấp phát động
   - Thư viện array (mảng)
   - Thư viện vector(cập nhật sau)
-
+  - Class
+    - Tính kế thừa
+  
 ## Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
   - "cout <<" bằng "printf". 
