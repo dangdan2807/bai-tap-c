@@ -17,3 +17,8 @@
    - Kế tiếp, bạn định nghĩa hàm calculate() để tìm tổng lương và định nghĩa hàm display().
    - Tạo đối tượng của lớp kế thừa, đọc số nhân viên.
    - Sau đó gọi 2 hàm đã định nghĩa ở trên nhapthongtin, nhapluong và calculate() cho mỗi nhân viên và cuối cùng gọi hàm display().
+
+### 2. Constructor:
+
+   - **Bài 1:** Sử dụng constructor để tìm số nguyên tố.
+   - **Bài 2:** Tính giai thừa bởi sử dụng copy constructor.

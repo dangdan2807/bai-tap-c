@@ -23,6 +23,7 @@ Share bài tập C\C++ tham khảo.
   - Thư viện vector(cập nhật sau)
   - Class
     - Tính kế thừa
+    - Constructor
   
 ## Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
