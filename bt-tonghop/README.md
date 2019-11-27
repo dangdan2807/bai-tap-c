@@ -12,3 +12,12 @@
     - Tạo 3 biến có giá trị lần lượt là ngày tháng năm sinh của bạn.
     - Nhân 3 số đó với nhau và tìm tất cả các số tự nhiên nhỏ hơn số đó chia hết đồng thời có ngày sinh và số 17.
     - Đưa 10 số lớn nhất vào một mảng theo thứ tự giảm dần.
+
+- **Bài 3:** (struct) Viết chương trình nhập vào thông tin sinh viên bao gồm: 
+
+   - Họ và tên.
+   - Lớp.
+   - Trường
+   - Ngày sinh
+   - Quê quán
+   - Giới tính

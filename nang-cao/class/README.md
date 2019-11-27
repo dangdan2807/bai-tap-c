@@ -22,3 +22,6 @@
 
    - **Bài 1:** Sử dụng constructor để tìm số nguyên tố.
    - **Bài 2:** Tính giai thừa bởi sử dụng copy constructor.
+
+### Bài Tập Tổng Hợp:
+   - **Bài 1:** 
