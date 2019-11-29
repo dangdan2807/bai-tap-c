@@ -2,7 +2,7 @@
 
 Share bài tập C\C++ tham khảo. 
 
-## Gồm có 3 phần:
+### Gồm có 3 phần:
 - Cơ bản:
   - Toán tử: lab 2 và 3.
   - Cấu điều kiện: 
@@ -25,7 +25,7 @@ Share bài tập C\C++ tham khảo.
     - Tính kế thừa
     - Constructor
   
-## Lưu ý
+### Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
   - "cout <<" bằng "printf". 
   - "cin >>" bằng "scanf". 
