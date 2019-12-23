@@ -10,3 +10,7 @@
 > 5  
 > 1 2 3 4 5
   - Rồi ghi các số nguyên tố có trong mảng vào bai2-output.txt 
+3. **Bài 2:** Đọc 1 dãy số nguyên từ file bai3-input.txt 
+#### Ví dụ trong file bai2-input.txt
+> 1 2 3 4 5 6
+  - Rồi ghi các số nguyên tố có trong mảng vào bai3-output.txt 

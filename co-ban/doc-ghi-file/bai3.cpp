@@ -8,24 +8,26 @@ bool kt_so_nguyen_to(int n);
 int main()
 {
 	ifstream filein;
-	filein.open("bai1-input.txt", ios_base::in);
+	filein.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//bai3-in.txt", ios_base::in);
 	if(filein.fail() == true)
 	{
 		cout <<"File khong ton tai!";
 		return 0;
 	}
-	int x;
-	filein >> x;
+	int n = 0; // bien dem so luong phan tu cua mang
+	int arr[100];
+	while(filein.eof() == false)
+	{
+		filein >> arr[n];
+		n++;
+	}
 	//ghi dữ liệu
 	ofstream fileout;
-	fileout.open("bai1-output.txt", ios_base::out);
-	if(kt_so_nguyen_to(x) == true)
+	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//bai3-out.txt", ios_base::out);
+	for(int i=0; i<n; i++)
 	{
-		fileout <<"true";
-	}
-	else
-	{
-		fileout <<"false";
+		if(kt_so_nguyen_to(arr[i]) == true)
+			fileout << arr[i] <<" ";
 	}
 	cout <<"Ghi vao file thanh cong.";
 	filein.close();
