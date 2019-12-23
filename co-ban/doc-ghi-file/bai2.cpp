@@ -3,29 +3,39 @@
 #include <fstream>
 using namespace std;
 
-bool kt_so_nguyen_to(int n);
+bool kt_so_nguyen_to(int);
 
 int main()
 {
 	ifstream filein;
-	filein.open("bai1-input.txt", ios_base::in);
+	// //sdcard//code//bai-tap-c//co-ban//doc-ghi-file//
+	filein.open("bai2-input.txt");
 	if(filein.fail() == true)
 	{
 		cout <<"File khong ton tai!";
 		return 0;
 	}
-	int x;
-	filein >> x;
+	int n; // số lượng phần tử của mảng
+	filein >> n;
+	int arr[n];
+	for(int i  = 0; i< n; i++)
+	{
+		filein >>arr[i];
+	}
+	// cách khác
+	/*int i=0;
+	while(!filein.eof())
+	{
+		filein >>arr[i];
+		i++;
+	}*/
 	//ghi dữ liệu
 	ofstream fileout;
-	fileout.open("bai1-output.txt", ios_base::out);
-	if(kt_so_nguyen_to(x) == true)
+	fileout.open("bai2-output.txt");
+	for(int i  = 0; i< n; i++)
 	{
-		fileout <<"true";
-	}
-	else
-	{
-		fileout <<"false";
+		if(kt_so_nguyen_to(arr[i]) == true)
+			fileout <<arr[i] <<" ";
 	}
 	cout <<"Ghi vao file thanh cong.";
 	filein.close();
@@ -40,9 +50,7 @@ bool kt_so_nguyen_to(int n)
 	else
 	{
 		if(n == 2)
-		{
 			return true;
-		}
 		else
 		{
 			if(n % 2 == 0)
