@@ -143,9 +143,10 @@ void ThuVien::input()
 		else if(luachon == 3){
 			cout <<"\nTong tien la: " << ThuVien::tinhtongtien() << endl;
 		}
-			
 		else if(luachon == 0)
 			break;
+		else
+			cout <<"Lua chon khong hop le, nhap lai.\n";
 	}
 }
 
