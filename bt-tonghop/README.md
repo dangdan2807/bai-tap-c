@@ -21,3 +21,7 @@
    - Ngày sinh
    - Quê quán
    - Giới tính
+- **Chuyển hệ 10 sang 2:** Chuyển số thập phân sang nhị phân
+  - Cách 1: chuyen-10-2-c1.cpp
+  - Cách 2: chuyen-10-2-c2.cpp
+- **Tạo chuỗi ngẫu nhiên:** (taochuoi-ngaunhien.cpp) Tạo chuỗi ngẫu nhiên các kí tự.
