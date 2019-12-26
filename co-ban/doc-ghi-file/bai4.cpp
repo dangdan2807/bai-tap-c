@@ -12,7 +12,7 @@ bool kt_so_amstrong(int n);
 int main()
 {
 	ifstream filein;
-	filein.open("bai4-in.txt", ios_base::in);
+	filein.open("input//bai4-in.txt", ios_base::in);
 	ofstream fileout;
 	fileout.open("bai4-out.txt", ios_base::out);
 	

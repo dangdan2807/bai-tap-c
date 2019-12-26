@@ -14,7 +14,7 @@ int tim_bcnn_mang(int a[], int n);
 int main()
 {
 	ifstream filein;
-	filein.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//bai5-in.txt", ios_base::in);
+	filein.open("input//bai5-in.txt", ios_base::in);
 	
 	int arr[100];
 	int n=0;
@@ -25,13 +25,13 @@ int main()
 	
 	//thao tac voi file thu 1
 	ofstream fileout;
-	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//bai5-ucln.txt", ios_base::out);
+	fileout.open("output//bai5-ucln.txt", ios_base::out);
 	cout <<"UCLN cua mang la: " <<tim_ucln_mang(arr, n) <<"\n";
 	fileout << tim_ucln_mang(arr, n);
 	fileout.close();
 	
 	//thao tac voi file thu 2
-	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//bai5-bcnn.txt", ios_base::out);
+	fileout.open("output//bai5-bcnn.txt", ios_base::out);
 	 cout <<"BCNN cua mang la: " <<tim_bcnn_mang(arr, n) <<"\n";
 	fileout << tim_bcnn_mang(arr, n);
 	fileout.close();

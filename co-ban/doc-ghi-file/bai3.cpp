@@ -8,7 +8,7 @@ bool kt_so_nguyen_to(int n);
 int main()
 {
 	ifstream filein;
-	filein.open("bai3-in.txt", ios_base::in);
+	filein.open("input//bai3-in.txt", ios_base::in);
 	if(filein.fail() == true)
 	{
 		cout <<"File khong ton tai!";
@@ -23,7 +23,7 @@ int main()
 	}
 	//ghi dữ liệu
 	ofstream fileout;
-	fileout.open("bai3-out.txt", ios_base::out);
+	fileout.open("output//bai3-out.txt", ios_base::out);
 	for(int i=0; i<n; i++)
 	{
 		if(kt_so_nguyen_to(arr[i]) == true)
