@@ -24,4 +24,16 @@
    - **Bài 2:** Tính giai thừa bởi sử dụng copy constructor.
 
 ### Bài Tập Tổng Hợp:
-   - **Bài 1:** 
+   - **Bài 1:** Thư viện X tiến hành cho đăng kí làm thẻ độc giả. Thông tin độc giả gồm: 
+     - Họ tên 
+     - Ngày lập thẻ
+     - Số tháng có hiệu lực của thẻ
+   -  Có 2 loại độc giả: trẻ em và người lớn
+      - Độc giả trẻ em cần lưu thêm thông tin họ tên người đại diện. Tiền làm thẻ tính theo công thức: số tháng có hiệu lực * 5.000 VND
+      - Độc giả người lớn cần lưu thêm thông tin số CMND. Tiền làm thể tính theo công thức: số tháng có hiệu lực * 10.000 VND 
+   - **Yêu cầu** Hãy cài đặt các lớp đại diện cho các loại thẻ độc giả trên để: 
+     - Quản lí thông tin thẻ 
+     - Tính tiền làm thẻ của một thẻ độc giả 
+   - Hãy cài đặt lớp ThuVien để quản lí danh sách các thẻ độc giả trong thư viện,với các chức năng sau:
+     - Nhập , xuất danh sách các thẻ độc giả 
+     - Tính tổng tiền làm thẻ
