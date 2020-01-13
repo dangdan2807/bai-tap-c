@@ -21,4 +21,6 @@
 
 [alt](https://drive.google.com/file/d/1oRFHjSJzwCoZMeTIKLvLUvZc-W2IHR7S/view?usp=drivesdk )
 
-![dequy-vd1](dequy-vd1.jpg)
+![dequy-vd1](/ki-thuat-lap-trinh/image/dequy-vd1.jpg)
+
+![1](https://drive.google.com/file/d/1oRFHjSJzwCoZMeTIKLvLUvZc-W2IHR7S/view?usp=drivesdk)
