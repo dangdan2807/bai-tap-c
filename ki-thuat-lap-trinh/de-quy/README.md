@@ -90,6 +90,10 @@ Dãy Q gồm n số nguyên không có thứ tự. Q được lưu trữ ở b�
        - Hiển thị phần tử lớn nhất và nhỏ nhất của dãy Q.
        - Tạo dãy số Q gồm n phần tử bằng cách sinh ngẫu nhiên (10^4 ≤ n ≤ 10^9). Thực hiện tính tổng của Q theo hai cách Đệ quy và Không đệ quy và so sánh thời gian thực hiện của mỗi giải thuật với cùng bộ dữ liệu Q(n). Lập báo cáo theo mẫu sau:
 
+ Hàm \ n  | n=10^4 | n=10^5 | n=10^6 | n=10^7 | n=10^9 |
+ --------------- | -------- | -------- | -------- | -------- | -------- |
+ sum         | ...(s) | ...(s) | ...(s) | ...(s) | ...(s)
+ sum_rec  | ...(s) | ...(s) | ...(s) | ...(s) | ...(s)
 
 #### Đoạn chương trình hướng dẫn kỹ thuật đo thời gian:
 ----
