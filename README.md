@@ -32,6 +32,6 @@ Share bài tập C\C++ tham khảo.
   
 ### Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
-  - `cout << <lệnh>` bằng `printf(<lệnh>)`. 
+  - **`cout << <lệnh>`** bằng `printf(<lệnh>)`. 
   - `cin >> <lệnh>` bằng `scanf(<lệnh>)`. 
   - hoặc để như thế chạy luôn cũng được không sao cả.
