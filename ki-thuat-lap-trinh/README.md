@@ -3,4 +3,5 @@
 Gồm các phần: 
 1. Đệ quy
 2. Kiểu chuỗi
-3. 
+3. Cấu trúc
+4. 

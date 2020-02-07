@@ -29,6 +29,8 @@ Share bài tập C\C++ tham khảo.
     - Tính đa hình
   - Kĩ thuật lập trình
     - Đệ quy
+    - Chuỗi ký tự
+    - Cấu trúc
   
 ### Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
