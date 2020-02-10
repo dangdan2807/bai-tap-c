@@ -26,7 +26,7 @@ void ghifile_ps_max(DanhSach ds, ofstream &fileout);
 int main()
 {
 	ifstream filein;
-	filein.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//input//bai6-in.txt", ios_base::in);
+	filein.open("input//bai6-in.txt", ios_base::in);
 	
 	DanhSach ds;
 	int n=0;
