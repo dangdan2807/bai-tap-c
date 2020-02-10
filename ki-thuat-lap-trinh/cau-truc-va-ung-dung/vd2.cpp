@@ -23,6 +23,7 @@ void export_info_array_sv(SV A[], int n);
 int find_info_1_sv(SV A[], int n);
 void export_info_from_find(SV A[], int n);
 void arrange_score(SV A[], int n);
+void hoc_lai(float x);
 void export_1_sv_ktlt(SV x, int i);
 void export_score_ktlt(SV A[], int n);
 
@@ -50,24 +51,29 @@ int main()
 		{
 			case 1: 
 				enter_info_array_sv(A, n);
+				//getchar(); getchar();
 				break;
 			case 2: 
 				export_info_array_sv(A, n);
+				getchar(); getchar();
 				break;
 			case 3:
 				export_info_from_find(A, n);
+				getchar(); getchar();
 				break;
 			case 4:
 				arrange_score(A, n);
+				getchar(); getchar();
 				break;
 			case 5:
 				export_score_ktlt(A, n);
+				getchar();
+				getchar();
 				break;
 		}
-		//Windows 'clear' = 'cls'
+		//Windows 'clear' = 'cls'..
 		 system("clear");
 	}while(lua_chon != 0 || lua_chon < 0 || lua_chon > 5);
-	cout <<1;
 	return 0;
 }
 
@@ -127,7 +133,7 @@ void export_info_1_sv(SV sinhvien, int i)
 	cout <<"| " <<i <<" |";
 	cout <<"\t" <<sinhvien.name <<"\t|";
 	cout <<"\t" <<sinhvien.id_sv <<"\t|";
-	cout <<"\t" <<sinhvien.dtb <<"  |\n";
+	cout <<"\t" <<sinhvien.dtb <<"  |";
 }
 
 void export_info_1_sv_2(SV sinhvien)
@@ -156,6 +162,7 @@ void enter_info_array_sv(SV A[], int &n)
 		cout <<"\n\tNhap thong tin sinh vien thu " << i+1 <<":\n";
 		enter_info_1_sv(A[i]);
 	}
+	//getchar();
 }
 
 void export_info_array_sv(SV A[], int n)
@@ -169,6 +176,7 @@ void export_info_array_sv(SV A[], int n)
 		export_info_1_sv(A[i], i+1);
 		printf(65);
 	}
+	//getchar();
 }
 
 int find_info_1_sv(SV A[], int n)
@@ -194,6 +202,7 @@ void export_info_from_find(SV A[], int n)
 		cout <<"\nKhong tim thay!";
 	else
 		export_info_1_sv_2(A[id]);
+	//getchar();
 }
 
 void arrange_score(SV A[], int n)
@@ -208,6 +217,12 @@ void arrange_score(SV A[], int n)
 			}
 }
 
+void hoc_lai(float x)
+{
+	if(x < 4)
+		cout <<"Hoc lai";
+}
+
 void export_1_sv_ktlt(SV x, int i)
 {
 	cout <<"| " <<i+1;
@@ -216,14 +231,17 @@ void export_1_sv_ktlt(SV x, int i)
 	cout <<" | " <<x.tk;
 	cout <<" | " <<x.gk;
 	cout <<" | " <<x.ck;
-	cout <<" | " <<x.th <<" |\t |";
+	cout <<" | " <<x.th;
+	cout <<" | " <<x.dtb;
+	cout <<" | "; hoc_lai(x.dtb);
+	cout <<"|";
 }
 
 void export_score_ktlt(SV A[], int n)
 {
 	cout <<"\n\tDANH SACH DIEM THI KTLT:\n";
 	printf(76);
-	cout <<"| STT | Ho va Ten \t|  Ma Sinh Vien  | TK | GK | CK | TH |   Ghi Chu   |\n";
+	cout <<"| STT | Ho va Ten \t|  Ma Sinh Vien  | TK | GK | CK | TH | DTB | Ghi Chu |\n";
 	printf(76);
 	for(int i = 0; i < n; i++)
 	{
