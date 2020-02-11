@@ -2,121 +2,86 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>
+#include <cstring>
 using namespace std;
+#define MAX 100
 
-struct PhanSo
+typedef struct ThongTin
 {
-	int tuso;
-	int mauso;
-};
-struct DanhSach
-{
-	PhanSo ds_ps[100];
-	int n;
-};
+	char name[100];
+	int age, luong;
+}TN;
 
-void doc_1_phan_so(PhanSo &a, ifstream &filein);
-void doc_file(DanhSach &ds, ifstream &filein);
-void xuat_mang(DanhSach a);
-int ucln(int x, int y);
-void rutgon_1_phanso(PhanSo &ps);
-void ghifile_rutgon_ds_phanso(DanhSach &ds, ofstream &fileout);
-void ghifile_ps_max(DanhSach ds, ofstream &fileout);
+void enter_1_tn(TN& x, ofstream &fileout);
+void write_file(TN A[], ifstream fileout);
+void read_1_tn(TN& x, ifstream& filein);
+void export_1_tn(TN x);
+void read_file(TN A[], int &n, ifstream& filein);
+void export_file(TN A[], int n);
 
 int main()
 {
 	ifstream filein;
-	filein.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//input//bai6-in.txt", ios_base::in);
-	
-	DanhSach ds;
-	int n=0;
-	doc_file(ds, filein);
-	cout <<"Day phan so doc duoc la: ";
-	xuat_mang(ds);
-	cout <<endl;
-	//thao tac voi file thu 1
 	ofstream fileout;
-	ghifile_rutgon_ds_phanso(ds, fileout);
-	cout <<"Day phan so sau khi rut gon: ";
-	xuat_mang(ds);
-	cout <<"\nPhan so lon nhat la: ";
-	ghifile_ps_max(ds, fileout);
+	fileout.open("bai2.txt", ios_base::in);
+	filein.open("bai2.txt", ios_base::in);
+	TN output[MAX];
+	TN input[MAX];
+	int n;
+	
 	fileout.close();
 	filein.close();
 	return 0;
 }
 
-void doc_1_phan_so(PhanSo &a, ifstream &filein)
+void enter_1_tn(TN& x, ofstream& fileout)
 {
-	char x;
-	filein >> a.tuso;
-	filein >> x;
-	filein >> a.mauso;
+	cout << "\nNhap ho va ten: ";
+	gets_s(x.name);
+	cout << "\nNhap tuoi: ";
+	cin >> x.age
+	cout <<
+
 }
-void doc_file(DanhSach &ds, ifstream &filein)
+
+void read_1_tn(TN& x, ifstream& filein)
 {
-	if(filein.fail() == true)
+	filein.getline(x.name, 100);
+	filein >> x.age;
+	filein >> x.luong;
+	filein.ignore();
+}
+
+void export_1_tn(TN x)
+{
+	cout << "\nHo va ten: " << x.name;
+	cout << "\nTuoi: " << x.age;
+	cout << "\nLuong: " << x.luong;
+	cout << endl;
+}
+
+void read_file(TN A[], int& n, ifstream& filein)
+{
+	if (filein.fail() == true)
 	{
-		cout <<"File doc khong ton tai!";
+		cout << "File khong ton tai!";
 		exit(0);
 	}
-	filein >> ds.n;
-	for(int i=0; i<ds.n; i++)
+	n = 0;
+	while (filein.eof() == false)
 	{
-		doc_1_phan_so(ds.ds_ps[i], filein);
+		read_1_tn(A[n], filein);
+		if (strcmp(A[n].name, "") == 0)
+			break;
+		n++;
 	}
 }
-void xuat_mang(DanhSach a)
+
+void export_file(TN A[], int n)
 {
-	for(int i= 0; i<a.n; i++)
-		cout <<a.ds_ps[i].tuso <<"/" <<a.ds_ps[i].mauso <<"  ";
-}
-int ucln(int x, int y)
-{
-	while(x != y)
+	for (int i = 0; i < n; i++)
 	{
-		if(x > y)
-			x-=y;
-		else if(x <y)
-			y-=x;
+		cout << "\nXuat thong tin nguoi thu " << i + 1;
+			export_1_tn(A[i]);
 	}
-	return x;
-}
-void rutgon_1_phanso(PhanSo &ps)
-{
-	int uc = ucln(ps.tuso, ps.mauso);
-	ps.tuso /= uc;
-	ps.mauso /= uc; 
-}
-void ghifile_rutgon_ds_phanso(DanhSach &ds, ofstream &fileout)
-{
-	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//output//bai6-rgps.txt", ios_base::out);	
-	for(int i=0; i<ds.n; i++)
-	{
-		rutgon_1_phanso(ds.ds_ps[i]);
-	}
-	for(int i=0; i<ds.n; i++)
-	{
-		fileout <<ds.ds_ps[i].tuso <<"/" <<ds.ds_ps[i].mauso <<"\n";
-	}
-	fileout.close();
-}
-void ghifile_ps_max(DanhSach ds, ofstream &fileout)
-{
-	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//output//bai6-out.txt", ios_base::out);
-	int dem = 0;
-	float max = 1.0* ds.ds_ps[0].tuso / ds.ds_ps[0].mauso;
-	float temp = 0;
-	for(int i=1; i<ds.n; i++)
-	{
-		temp = ds.ds_ps[i].tuso / (ds.ds_ps[i].mauso * 1.0);
-		if(max < temp)
-		{
-			max = temp;
-			dem = i;
-		}
-	}
-	fileout <<ds.ds_ps[dem].tuso <<"/" <<ds.ds_ps[dem].mauso <<"\n";
-	cout <<ds.ds_ps[dem].tuso <<"/" <<ds.ds_ps[dem].mauso <<"\n";
-	fileout.close();
 }
