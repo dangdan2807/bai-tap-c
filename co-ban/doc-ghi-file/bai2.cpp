@@ -8,7 +8,7 @@ bool kt_so_nguyen_to(int n);
 int main()
 {
 	ifstream filein;
-	filein.open("input//bai2-input.txt", ios_base::in);
+	filein.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//input//bai2-input.txt", ios_base::in);
 	if(filein.fail() == true)
 	{
 		cout <<"File khong ton tai!";
@@ -19,7 +19,7 @@ int main()
 	int arr[n];
 	//ghi dữ liệu
 	ofstream fileout;
-	fileout.open("output//bai2-output.txt", ios_base::out);
+	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//output//bai2-output.txt", ios_base::out);
 	for(int i=0; i<n; i++)
 	{
 		filein >> arr[i];

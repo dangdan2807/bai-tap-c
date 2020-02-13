@@ -16,7 +16,7 @@ int main()
 	}
 	int n = 0; // bien dem so luong phan tu cua mang
 	int arr[100];
-	while(filein.eof() == false)
+	while( filein.eof() == false)
 	{
 		filein >> arr[n];
 		n++;
