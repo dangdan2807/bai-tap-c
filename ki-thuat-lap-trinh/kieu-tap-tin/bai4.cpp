@@ -1,7 +1,7 @@
-#include <iostream>
+ #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
+#include <string.h>
 #include <fstream>
 using namespace std;
 #define SIZE 'Z' - 'A' + 1
@@ -12,7 +12,7 @@ void show_count(long Count[], int n, int dem);
 
 int main()
 {
-	const char* address = "output//bai4.txt";
+	const char* address = "//sdcard//code//bai-tap-c//ki-thuat-lap-trinh//kieu-tap-tin//output//bai4.txt";
 	ifstream file_input;
 	file_input.open(address, ios_base::in);
 	
@@ -43,20 +43,21 @@ void read_file(long count[], ifstream& infile, const char* a)
 		count[i] = 0;
 	int size = 0;
 	//cách 1
-	/*
 	while(infile.eof() == false)
 	{
-		size++;
 		infile >> ch;
-		/*if(ch == EOF)
+		if(infile.eof() == true)
 			break;
 		ch = toupper(ch);
 		if('A' <= ch && ch <= 'Z')
 			count[ch - 'A']++;
 	}
-	infile.close();
-	infile.open(a, ios_base:: in);
-	for(int i = 0; i < size-1; i++)
+	
+	// cách 2
+	/*infile.seekg(0, ios_base::end);
+	size = infile.tellg();
+	infile.seekg(0, ios_base::beg);
+	for(int i = 1; i < size-2; i++)
 	{
 		infile >> ch;
 		if(ch == EOF)
@@ -65,20 +66,6 @@ void read_file(long count[], ifstream& infile, const char* a)
 		if('A' <= ch && ch <= 'Z')
 			count[ch - 'A']++;
 	}*/
-	
-	// cách 2
-	infile.seekg(0, ios_base::end);
-	size = infile.tellg();
-	infile.seekg(0, ios_base::beg);
-	for(int i = 0; i < size-3; i++)
-	{
-		infile >> ch;
-		if(ch == EOF)
-			break;
-		ch = toupper(ch);
-		if('A' <= ch && ch <= 'Z')
-			count[ch - 'A']++;
-	}
 }
 
 void show_count(long count[], int n, int dem)

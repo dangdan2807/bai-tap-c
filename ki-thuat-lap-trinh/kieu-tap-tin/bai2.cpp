@@ -23,7 +23,7 @@ void export_array(TN A[], int n);
 
 int main()
 {
-	const char* address = "//sdcard//code//bai-tap-c//ki-thuat-lap-trinh//kieu-tap-tin//output//bai2.txt";
+	const char* address = "output//bai2.txt";
 	fstream filein, fileout, file_addend;
 	TN Array_A[MAX], Array_B[MAX];
 	int n, luachon;

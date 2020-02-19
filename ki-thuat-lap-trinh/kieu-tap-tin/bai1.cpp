@@ -12,7 +12,7 @@ float sum(float A[], int n);
 int main()
 {
 	ifstream filein;
-	filein.open("//sdcard//code//bai-tap-c//ki-thuat-lap-trinh//kieu-tap-tin//input//bai1.txt", ios_base::in);
+	filein.open("input//bai1.txt", ios_base::in);
 	float array[50];
 	int n;
 	read_file(array, n, filein);
