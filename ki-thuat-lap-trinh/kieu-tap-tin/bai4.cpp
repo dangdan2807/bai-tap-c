@@ -12,7 +12,7 @@ void show_count(long Count[], int n, int dem);
 
 int main()
 {
-	const char* address = "//sdcard//code//bai-tap-c//ki-thuat-lap-trinh//kieu-tap-tin//output//bai4.txt";
+	const char* address = "output//bai4.txt";
 	ifstream file_input;
 	file_input.open(address, ios_base::in);
 	
@@ -79,4 +79,4 @@ void show_count(long count[], int n, int dem)
 		}
 	}
 	 cout << "File co " << dem << " chu.\n";
-}
+} 
