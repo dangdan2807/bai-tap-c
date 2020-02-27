@@ -74,30 +74,30 @@
              case 3: pf = lp; break;
              case 4: pf = hv; break;
              default: thoat = true; break;
-           }
-           if(thoat) break;
-           hienthi(a,b);
-           pf(a,b);
-           hienthi(a,b);
-        }
-        return 0;
-     }
-     void hienthi(int x, int y)
-     {
-        printf("\n a = %d, b = %d \n", x, y);
-     }  
+          }
+          if(thoat) break;
+          hienthi(a,b);
+          pf(a,b);
+          hienthi(a,b);
+       }
+       return 0;
+    }
+    void hienthi(int x, int y) 
+    {
+      printf("\n a = %d, b = %d \n", x, y); 
+    }  
 
     void bp(int &x, int &y)
     {
-        x *= x;
-        y *= y;
-     }  
+      x *= x;
+      y *= y;
+    }  
 
-     void lp(int &x, int &y)
-     {
-        x = x*x*x;
-        y = y*y*y;
-     }  
+    void lp(int &x, int &y)
+    {
+      x = x*x*x;
+      y = y*y*y;
+    }  
 
     void hv(int &x, int &y)
     {
@@ -114,6 +114,9 @@
       scanf("%d", &y);
     }  
     ```
+    
+    #### Giải thích:  
+  - Khi nhập lựa chọn máy tính sẽ dẫn đến `case` tương ứng và thực hiện hàm được trỏ ở `case` đó trỏ đến và tự truyền các tham số như đã khai báo của hàm con trỏ phía trên. Và thực hiện các lệnh trong hàm và `break;` khỏi `switch`.  
 
     **1.3:** Viết lại chương trình trên nhưng không sử dụng con trỏ hàm.  
     **1.4:** Giải thích cách thức hoạt động của tham số hàm là con trỏ hàm trong chương trình sau đây:  
