@@ -31,6 +31,8 @@ Share bài tập C\C++ tham khảo.
     - Đệ quy
     - Chuỗi ký tự
     - Cấu trúc
+    - Cấu trúc và ứng dụng
+    - Kiểu tập tin
   
 ### Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:

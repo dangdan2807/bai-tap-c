@@ -88,7 +88,7 @@ Dãy Q gồm n số nguyên không có thứ tự. Q được lưu trữ ở b�
        - Tạo dãy số Q gồm n số bằng cách sinh ngẫu nhiên (1 ≤ n ≤ 100)
        - Hiển thị các phần tử của dãy Q
        - Hiển thị phần tử lớn nhất và nhỏ nhất của dãy Q.
-       - Tạo dãy số Q gồm n phần tử bằng cách sinh ngẫu nhiên (10^4 ≤ n ≤ 10^9). Thực hiện tính tổng của Q theo hai cách Đệ quy và Không đệ quy và so sánh thời gian thực hiện của mỗi giải thuật với cùng bộ dữ liệu Q(n). Lập báo cáo theo mẫu sau:
+       - Tạo dãy số Q gồm n phần tử bằng cách sinh ngẫu nhiên (10^4 ≤ n ≤ 10^9). Thực hiện tính tổng của Q theo hai cách Đệ quy và Không đệ quy và so sánh thời gian thực hiện của mỗi giải thuật với cùng bộ dữ liệu Q(n). Lập báo cáo theo mẫu sau:(f)
 
  Hàm \ n  | n=10^4 | n=10^5 | n=10^6 | n=10^7 | n=10^9 |
  --------------- | -------- | -------- | -------- | -------- | -------- |

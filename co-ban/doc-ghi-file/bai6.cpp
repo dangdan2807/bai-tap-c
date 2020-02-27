@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <fstream>
 using namespace std;
-
+ 
 struct PhanSo
 {
 	int tuso;
@@ -14,7 +14,7 @@ struct DanhSach
 	PhanSo ds_ps[100];
 	int n;
 };
-
+ 
 void doc_1_phan_so(PhanSo &a, ifstream &filein);
 void doc_file(DanhSach &ds, ifstream &filein);
 void xuat_mang(DanhSach a);
@@ -22,7 +22,7 @@ int ucln(int x, int y);
 void rutgon_1_phanso(PhanSo &ps);
 void ghifile_rutgon_ds_phanso(DanhSach &ds, ofstream &fileout);
 void ghifile_ps_max(DanhSach ds, ofstream &fileout);
-
+ 
 int main()
 {
 	ifstream filein;
@@ -45,7 +45,7 @@ int main()
 	filein.close();
 	return 0;
 }
-
+ 
 void doc_1_phan_so(PhanSo &a, ifstream &filein)
 {
 	char x;
@@ -90,7 +90,7 @@ void rutgon_1_phanso(PhanSo &ps)
 }
 void ghifile_rutgon_ds_phanso(DanhSach &ds, ofstream &fileout)
 {
-	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//output//bai6-rgps.txt", ios_base::out);	
+	fileout.open("output//bai6-rgps.txt", ios_base::out);	
 	for(int i=0; i<ds.n; i++)
 	{
 		rutgon_1_phanso(ds.ds_ps[i]);
@@ -103,7 +103,7 @@ void ghifile_rutgon_ds_phanso(DanhSach &ds, ofstream &fileout)
 }
 void ghifile_ps_max(DanhSach ds, ofstream &fileout)
 {
-	fileout.open("//sdcard//code//bai-tap-c//co-ban//doc-ghi-file//output//bai6-out.txt", ios_base::out);
+	fileout.open("output//bai6-out.txt", ios_base::out);
 	int dem = 0;
 	float max = 1.0* ds.ds_ps[0].tuso / ds.ds_ps[0].mauso;
 	float temp = 0;

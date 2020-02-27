@@ -18,7 +18,7 @@
     - Nhập dữ liệu các sinh viên vào một danh sách liên kết đơn, trường dữ liệu của mỗi nút bao gồm: Họ lót, tên, điểm toán, điểm tin. Sau đó lưu dữ liệu vào một tập tin có tên DULIEU.DAT
     - In danh sach sinh viên vừa nhập
     - Mở tập tin DULIEU.DAT (bai5.dat) để tu sửa các mẫu tin.
-    - Đọc nội dung tập tin DULIEU.DAT vào danh sách liên kết đơn (sau khi đã tu sủa) và hiển thị ra màn hình các mẫu tin.
+    - Đọc nội dung tập tin DULIEU.DAT vào danh sách liên kết đơn (sau khi đã tu sủa) và hiển thị ra màn hình các mẫu tin.(f)
 
 6. **Bài toán 6:** Viết chương trình in nội dung tập tin văn bản, chỉ in các ký tự chữ cái và chữ số. Tên tập tin là đối số của hàm main.
 
