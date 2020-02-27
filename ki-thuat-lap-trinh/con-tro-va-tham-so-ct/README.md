@@ -191,3 +191,5 @@
       scanf("%d", &y);
     }
     ```
+    #### Giải thích:
+  - Khi xuất hiện lời gọi hàm `hienthi(pf, a, b);` hàm sẽ được thực thi với các tham số truyền vào. Khi đền dòng lệnh `pf(x, y);` con trỏ hàm sẽ trỏ đến hàm vừa được trỏ trong câu điều kiện `switch` và đồng thời truyền vào các tham số `x, y` rồi thực thi hàm đã được gán ở trên câu điều kiện `switch`.

@@ -27,12 +27,15 @@ Share bài tập C\C++ tham khảo.
     - Tính đóng gói
     - Tính trừu tượng
     - Tính đa hình
-  - Kĩ thuật lập trình
+- Kĩ thuật lập trình
     - Đệ quy
     - Chuỗi ký tự
     - Cấu trúc
     - Cấu trúc và ứng dụng
     - Kiểu tập tin
+    - Thao tác con trỏ
+    - Con trỏ và tham số chương trình
+    -
   
 ### Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
