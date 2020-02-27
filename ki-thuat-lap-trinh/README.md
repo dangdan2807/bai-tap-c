@@ -6,4 +6,6 @@ Gồm các phần:
 3. Cấu trúc
 4. Cấu trúc và ứng dụng
 5. Kiểu tập tin
-6. 
+6. Thao tác con trỏ
+7. Con trỏ và tham số chương trình
+8. 
