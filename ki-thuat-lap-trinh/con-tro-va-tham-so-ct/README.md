@@ -270,3 +270,17 @@
       return 0;
     }
     ```
+    
+    #### Kết quả:
+    ```
+    a[0] = 0  a[1] = 1  a[2] = 2  a[3] = 3  a[4] = 4  
+    a[5] = 5  a[6] = 6  a[7] = 7  a[8] = 8  a[9] = 9  
+    a[0] = 0  a[1] = 1  a[2] = 2  a[3] = 3  a[4] = 4  
+    a[5] = 5  a[6] = 7  a[7] = 7  a[8] = 8  a[9] = 9
+    ```
+    
+    #### Giải thích:
+    - Sau khi cho `i = 5`, ở `a[one(i)]` đầu tiên là a[6] vì i khi đi qua hàm `one()` sẽ tăng lên 1 đơn vị(truyền trị). 
+    - Còn ở `a[one(i)]` thứ hai ta được a[7] tương tự như trên.
+    - Từ 2 điều trên ta được a[6] = a[7] = 7.
+    - Nên kết quả khi hiển thị ra màn hình ở vòng lặp `for` cuối chương trình t có `a[6] = 7` chứ không phải `a[6] = 6` như ở vòng lặp `for` đầu.
