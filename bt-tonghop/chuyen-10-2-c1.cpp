@@ -21,9 +21,9 @@ long long doihe(int x)
 	while(x>0)
 	{
 		if(x%2 == 0)
-			he2 += 1 * pow(10, i);
+			he2 += 0;
 		else if(x%2 == 1)
-			he2 +=pow(10, i);
+			he2 += 1 * pow(10, i);
 		i++;
 		x/=2;
 	}

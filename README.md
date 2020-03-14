@@ -27,14 +27,18 @@ Share bài tập C\C++ tham khảo.
     - Tính đóng gói
     - Tính trừu tượng
     - Tính đa hình
-  - Kĩ thuật lập trình (đang cập nhật)
+- Kĩ thuật lập trình
+    - Đệ quy
+    - Chuỗi ký tự
+    - Cấu trúc
+    - Cấu trúc và ứng dụng
+    - Kiểu tập tin
+    - Thao tác con trỏ
+    - Con trỏ và tham số chương trình
+    -
   
 ### Lưu ý
 - Hiện tại chỉ có C++. Ai muốn dùng(chạy code) C thì thay lại chỗ lệnh:
-  - **`cout << <lệnh>`** bằng `printf(<lệnh>)`. 
+  - `cout << <lệnh>` bằng `printf(<lệnh>)`. 
   - `cin >> <lệnh>` bằng `scanf(<lệnh>)`. 
   - hoặc để như thế chạy luôn cũng được không sao cả.
-- Ngoài các phần trên các bạn nên tự tìn hiểu thêm về:
-  - Con trỏ và cấp phát động biến. 
-  - Con trỏ và cấp phát động mảng(không thay đổi được kích thước).
-  - Vecto (Con trỏ và cấp phát động mảng thay đổi kích thước được).
