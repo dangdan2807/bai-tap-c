@@ -81,13 +81,13 @@ void enter_info_hv(HV& x)
 	cout << "Nhap Ho ten lot: ";
 	fflush(stdin);
 	//Visual Studio 2019 - gets_s();
-	gets(x.holot);
+	fgets(x.holot, strlen(x.holot), stdin);
 	cout << "Nhap ten: ";
 	fflush(stdin);
-	gets(x.ten);
+	fgets(x.ten, strlen(x.ten), stdin);
 	cout << "Nhap ngay thang nam sinh: ";
 	fflush(stdin);
-	gets(x.ngaysinh);
+	fgets(x.ngaysinh, strlen(x.ngaysinh),stdin);
 }
 
 void export_info_hv(HV x, int i)
