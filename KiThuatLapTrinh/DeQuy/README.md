@@ -18,17 +18,17 @@ Cho các biểu thức sau:
         
     _Test:_
 
-    ![vd1](/ki-thuat-lap-trinh/image/dequy-vd1.jpg)
+    ![vd1](/KiThuatLapTrinh/image/dequy-vd1.jpg)
 
 2. **Vấn đề 2:** Cấp số cộng và Cấp số nhân
 
   - Tìm giá trị phần tử thứ n của 1 cấp số cộng có số hạng đầu là a, công sai là r  
 
-    ![dequy-vd2-1](/ki-thuat-lap-trinh/image/dequy-vd2-1.jpg)
+    ![dequy-vd2-1](/KiThuatLapTrinh/image/dequy-vd2-1.jpg)
 
   - Tìm giá trị phần tử thứ n của 1 cấp số nhân có số hạng đầu là a, công bội là q
 
-    ![dequy-vd2-2](/ki-thuat-lap-trinh/image/dequy-vd2-2.jpg)
+    ![dequy-vd2-2](/KiThuatLapTrinh/image/dequy-vd2-2.jpg)
 
     _Yêu cầu:_  
 

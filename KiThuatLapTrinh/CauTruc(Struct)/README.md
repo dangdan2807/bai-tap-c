@@ -39,7 +39,7 @@ Tham khảo chương trình bên dưới để thực hiện kiểm tra ti
          }  
 ```
 2. **Vấn đề 2**: Đa giác lồi n đỉnh có tọa độ các đỉnh được lưu trong mảng A. Tính và hiển thị lên màn hình diện tích của đa giác lồi đó.  
-![cautruc-vd2-1](/ki-thuat-lap-trinh/image/cautruc-vd2-1.jpg)
+![cautruc-vd2-1](/KiThuatLapTrinh/image/cautruc-vd2-1.jpg)
 
     _Hướng dẫn:_  
 
@@ -55,13 +55,13 @@ Tham khảo chương trình bên dưới để thực hiện kiểm tra ti
     2. Viết hàm trả về độ dài đoạn thẳng P1P2 khi biết tọa độ 2 điểm đầu mút.  
 ` float P1P2(Point P1, Point P2); `  
 **Ghi chú:** Công thức tính độ dài đoạn thẳng AB:
-  ![cautruc-vd2-2](/ki-thuat-lap-trinh/image/cautruc-vd2-2.jpg)
+  ![cautruc-vd2-2](/KiThuatLapTrinh/image/cautruc-vd2-2.jpg)
 
     3. Viết hàm trả về diện tích của tam giác P1P2P3 khi biết tọa độ các đỉnh của chúng hoặc trả về 0 khi P1, P2, P3 thẳng hàng.  
   ` float SP1P2P3(Point P1, Point P2, Point P3); `
 
     4. Tổ chức danh sách đặc (mảng) A chứa tọa độ n đỉnh của đa giác lồi. Thực hiện tính diện tích các tam giác  
-    ![cautruc-vd2-4](/ki-thuat-lap-trinh/image/cautruc-vd2-4.jpg)
+    ![cautruc-vd2-4](/KiThuatLapTrinh/image/cautruc-vd2-4.jpg)  
     Khi đó diện tích đa giác lồi bằng tổng diện tích của n-2 tam giác đó.  
         1. Định nghĩa đa giác
         ```
@@ -75,4 +75,4 @@ Tham khảo chương trình bên dưới để thực hiện kiểm tra ti
 
       _Báo Cáo:_  
 Lập báo cáo Input và output cho 3 trường hợp n=3, 6, 10  
-  ![cautruc-vd2-3](/ki-thuat-lap-trinh/image/cautruc-vd2-3.jpg)
+  ![cautruc-vd2-3](/KiThuatLapTrinh/image/cautruc-vd2-3.jpg)
