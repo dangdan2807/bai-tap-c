@@ -1,0 +1,14 @@
+father|cha
+add|them
+apple|qua tao
+army|quan doi
+ball|qua bong
+big|to lon
+cold|lanh
+family|gia dinh
+girl|co gai
+go|di
+king|vua
+zoo|so thu
+zone|khu vuc, vung
+about|khoang chung
