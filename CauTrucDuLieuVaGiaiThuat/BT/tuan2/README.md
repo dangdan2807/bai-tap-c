@@ -16,8 +16,8 @@ Trong đó, các thuật toán như `Interchange sort`, `Bubble sort`, `Insertio
    - Nổi bọt (`làm ở nhà`)
    - Quicksort
   
-   2. Chạy thử các thuật toán trên với các mảng sau:
-    Mảng 1: `10 3 7 4 2 8 5 12`
+   2. Chạy thử các thuật toán trên với các mảng sau:  
+    Mảng 1: `10 3 7 4 2 8 5 12`  
     Mảng 2: `14 33 27 10 35 19 42 44`
    3. Ở mỗi thuật toán sắp xếp, hãy xuất mảng để theo dõi mỗi khi có sự thay
 đổi trong mảng. Gợi ý: gọi hàm xuất mảng ngay sau khi gọi hàm hoán
