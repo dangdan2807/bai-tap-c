@@ -1,7 +1,7 @@
 # Bài tập CodeLearn.io
 
 1. **Bài 1: distance To Z** 
-    ![codeLearn_distanceToZ](../images/../CodeLearn/img/codeLearn_distanceToZ.png)
+    ![codeLearn_distanceToZ](../CodeLearn/img/codeLearn_distanceToZ.png)
     #### **CASE** 
     |                                                                                                                                                           input                                                                                                                                                            |                                        output                                         |
     | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
@@ -14,7 +14,7 @@
     [**Làm bài trên codelearn tại đây**](https://codelearn.io/training/detail/306752)
 
 2. **Bài 2: swap Characters** 
-    ![codeLearn_swapCharacters](../images/../CodeLearn/img/codeLearn_swapCharacters.png)
+    ![codeLearn_swapCharacters](../CodeLearn/img/codeLearn_swapCharacters.png)
 
     #### CASE
     | input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | output |
@@ -28,7 +28,7 @@
     [**Làm bài trên codelearn tại đây**](https://codelearn.io/training/detail/2501088)
 
 3. **Bài 3: count Odd Number**
-    ![alt](../CodeLearn/img/codeLearn_countOddNumber.png)  
+    ![codeLearn_countOddNumber](../CodeLearn/img/codeLearn_countOddNumber.png)  
     [**Làm bài trên codelearn tại đây**](https://codelearn.io/training/detail/2869974)
 
     #### **CASE** 
@@ -40,3 +40,16 @@
     | 1681692777,1714636915 |  16472070 |
     | 424238335,1957747793  | 766754730 |
     | 719885386,1649760492  | 464937553 |
+
+4. **Bài 4: count Diagonals**
+    ![alt](../CodeLearn/img/codeLearn_countDiagonals.png)  
+    [**Làm bài trên codelearn tại đây**](https://codelearn.io/training/detail/2704274)
+
+    #### **CASE** 
+    | input | output |
+    | :---- | -----: |
+    | 5     |      5 |
+    | 6     |      9 |
+    | 23    |    230 |
+    | 10    |     35 |
+    | 25    |    275 |
