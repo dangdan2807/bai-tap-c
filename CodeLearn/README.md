@@ -41,7 +41,7 @@
     | 424238335,1957747793  | 766754730 |
     | 719885386,1649760492  | 464937553 |
 
-4. **Bài 4: count Diagonals**
+4. **Bài 4: count Diagonals**  
     ![alt](../CodeLearn/img/codeLearn_countDiagonals.png)  
     [**Làm bài trên codelearn tại đây**](https://codelearn.io/training/detail/2704274)
 
@@ -53,3 +53,21 @@
     | 23    |    230 |
     | 10    |     35 |
     | 25    |    275 |
+
+5. **Bài 5: last Two Digits**
+    ![codeLearn_lastTwoDigits](../CodeLearn/img/codeLearn_lastTwoDigits.png)
+
+    #### **CASE**
+    | input       | Output |
+    | :---------- | -----: |
+    | 3,6         |   "29" |
+    | 7, 4        |   "01" |
+    | 47, 13      |   "27" |
+    | 8, 905      |   "68" |
+    | 979, 33     |   "39" |
+    | 65, 2257    |   "25" |
+    | 40, 40      |   "00" |
+    | 9271, 8     |   "61" |
+    | 80412, 55   |   "68" |
+    | 11584, 1156 |   "16" |
+    | 50998,69143 |   "92" |
