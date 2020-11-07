@@ -192,7 +192,7 @@ void NhapSinhVien(SinhVien &x)
     cout << "\nNhap ma sinh vien: ";
     cin >> x.maSV;
     cout << "Nhap ho va ten: ";
-    fflush(stdin);
+    getchar();
     getline(cin, x.hoTen);
     cout << "Gioi tinh (1 - Nam/0 - Nu): ";
     cin >> x.gioiTinh;
@@ -201,7 +201,7 @@ void NhapSinhVien(SinhVien &x)
     cout << "Nhap diem TB: ";
     cin >> x.diemTB;
     cout << "Nhap dia chi: ";
-    fflush(stdin);
+    getchar();
     getline(cin, x.diaChi);
 }
 
@@ -220,17 +220,17 @@ void NhapDSSV(List &l)
     for (int i = 0; i < n; i++)
     {
         cout << "Nhap sinh vien thu " << i + 1 << ": ";
-        // NhapSinhVien(x);
+        NhapSinhVien(x);
         if (l.first == NULL)
             InsertLast_KhongTrung(l, sv1);
             // ThemCoThuTu(l, sv1);
         else
         {
-            // ThemCoThuTu_KhongTrungMa(l, x);
-            ThemCoThuTu_KhongTrungMa(l, sv5);
-            ThemCoThuTu_KhongTrungMa(l, sv3);
-            ThemCoThuTu_KhongTrungMa(l, sv4);
-            ThemCoThuTu_KhongTrungMa(l, sv2);
+            ThemCoThuTu_KhongTrungMa(l, x);
+            // ThemCoThuTu_KhongTrungMa(l, sv5);
+            // ThemCoThuTu_KhongTrungMa(l, sv3);
+            // ThemCoThuTu_KhongTrungMa(l, sv4);
+            // ThemCoThuTu_KhongTrungMa(l, sv2);
         }
     }
     cout << "\nKet thuc nhap danh sach sinh vien";
