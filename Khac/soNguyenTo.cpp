@@ -1,8 +1,9 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+typedef unsigned long long ll;
 
-int soNguyenTo(int n)
+int soNguyenTo(ll n)
 {
     if (n == 2 || n == 3 || n == 5)
         return 1;
@@ -25,36 +26,85 @@ int soNguyenTo(int n)
     return 1;
 }
 
-int soDem(int n)
+ll ModMul(ll a, ll b, ll n)
 {
-    long sum = 0;
-    while (n > 0)
+    ll ans = 0;
+    while (b)
     {
-        sum += n % 10;
-        n /= 10;
+        // kiểm tra chẵn lẻ
+        // toán tử bit: sét bit cuối cùng của b nên 1-> lẻ, 0 -> chẳn
+        // or b & 2 == 1
+        if (b & 1)
+            ans = (ans + a) % n;
+        a = (a + a) % n;
+        // dịch bit sang phải
+        // or b /= 2
+        b >>= 1;
     }
-    if (sum % 10 == 0)
-        return 1;
-    return 0;
+    return ans;
+}
+
+ll ModExp(ll a, ll b, ll n)
+{
+    ll ans = 1;
+    while (b)
+    {
+        if (b & 1)
+            ans = ModMul(ans, a, n);
+        a = ModMul(a, a, n);
+        b >>= 1;
+    }
+    return ans;
+}
+
+bool miller_rabin(ll n)
+{
+    ll i, j, a, x, y, t, u, s = 10;
+    if (n == 2)
+        return true;
+    if (n < 2 || !(n & 1))
+        return false;
+
+    for (t = 0, u = n - 1; !(u & 1); t++, u >>= 1)
+        ;
+
+    for (i = 0; i < s; i++)
+    {
+        a = rand() % (n - 1) + 1;
+        x = ModExp(a, u, n);
+        for (j = 0; j < t; j++)
+        {
+            y = ModMul(x, x, n);
+            if (y == 1 && x != 1 && x != n - 1)
+                return false;
+            x = y;
+        }
+        if (x != 1)
+            return false;
+    }
+    return true;
 }
 
 int main(int argc, char const *argv[])
 {
-    int n, m;
-    cin >> n >> m;
-    long temp = 0;
-    long dem = 0;
-    for (int i = n; i <= 10000; i++)
-    {
-        if (soNguyenTo(i) == 1)
-        {
-            if(soDem(i) == 1)
-                dem++;
-            temp++;
-        }
-        if (temp >= m)
-            break;
-    }
-    cout << dem << endl;
+    ll n, m;
+    n = 96832323092641963234243123;
+    cout << soNguyenTo(n) << endl;
+    float a;
+    clock_t time_req;
+    time_req = clock();
+
+    soNguyenTo(n);
+
+    time_req = clock() - time_req;
+    cout << (float)time_req / CLOCKS_PER_SEC << " seconds" << endl;
+
+    // miller_rabin
+    time_req = clock();
+    
+    miller_rabin(n);
+
+    time_req = clock() - time_req;
+    cout <<(float)time_req / CLOCKS_PER_SEC << " seconds" << endl;
     return 0;
 }
