@@ -35,6 +35,7 @@ Node *timKiem(Tree t, char masv[20]);
 int xoaNode(Tree &t, char masv[20]);
 
 void menu();
+void dungMangHinh();
 
 // ===================================
 int main(int argc, char const *argv[])
@@ -55,36 +56,26 @@ int main(int argc, char const *argv[])
             break;
         case 1:
             nhapDS(t);
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         case 2:
             printf("%-15s %-20s %-15s\n", "Ma SV", "Name", "diem");
             xuatDS(t);
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         case 3:
             // cout << "\nSo nut la: " << countSoNodeLa(t);
             cout << "\nSo nut la: " << countSoNodeLa(t);
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         case 4:
             cout << "\nChieu cao cua cay: " << chieuCaoCay(t);
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         case 5:
             cout << "\nChen sinh vien vao danh sach: ";
             chenNode(t);
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         case 6:
             cout << "\nTim sinh vien";
@@ -93,9 +84,7 @@ int main(int argc, char const *argv[])
             cin.getline(temp, 20);
             p = timKiem(t, temp);
             xuatSV(p->key);
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         case 7:
             cout << "\nXoa sinh vien";
@@ -117,15 +106,11 @@ int main(int argc, char const *argv[])
                 cout << "\nxoa thanh cong";
             else
                 cout << "\nkhong tim thay sinh vien";
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         default:
             cout << "\nLua chon khong hop le";
-            cout << "\nNhap phim bat ky de tiep tuc .....";
-            fflush(stdin);
-            getchar();
+            dungMangHinh();
             break;
         }
     } while (luaChon != 0);
@@ -154,10 +139,7 @@ int insertNode(Tree &t, item x)
 {
     if (t == NULL)
     {
-        t = new Node;
-        t->key = x;
-        t->pLeft = NULL;
-        t->pRight = NULL;
+        t = getNode(x);
         return 1;
     }
     else if (t != NULL)
@@ -275,19 +257,6 @@ int chieuCaoCay(Tree t)
     return 1 + max(chieuCaoCay(t->pLeft), chieuCaoCay(t->pRight));
 }
 
-void menu()
-{
-    cout << "\n================ Menu =================";
-    cout << "\n1. Nhap danh sach sinh vien";
-    cout << "\n2. Xuat danh sach sinh vien";
-    cout << "\n3. Dem so node la cua cay";
-    cout << "\n4. Tinh chieu cao cua cay";
-    cout << "\n5. Them mot sinh vien";
-    cout << "\n6. Tim mot sinh vien";
-    cout << "\n7. Xoa mot sinh vien";
-    cout << "\nNhap lua chon: ";
-}
-
 Node *timKiem(Tree t, char masv[20])
 {
     if (t != NULL)
@@ -320,7 +289,7 @@ int xoaNode(Tree &t, char masv[20])
         else
         {
             Node *s = t, *q = t->pLeft;
-            while(q->pRight != NULL)
+            while (q->pRight != NULL)
             {
                 s = q;
                 q = q->pRight;
@@ -331,4 +300,24 @@ int xoaNode(Tree &t, char masv[20])
         }
     }
     return 1;
+}
+
+void menu()
+{
+    cout << "\n================ Menu =================";
+    cout << "\n1. Nhap danh sach sinh vien";
+    cout << "\n2. Xuat danh sach sinh vien";
+    cout << "\n3. Dem so node la cua cay";
+    cout << "\n4. Tinh chieu cao cua cay";
+    cout << "\n5. Them mot sinh vien";
+    cout << "\n6. Tim mot sinh vien";
+    cout << "\n7. Xoa mot sinh vien";
+    cout << "\nNhap lua chon: ";
+}
+
+void dungMangHinh()
+{
+    cout << "\nNhap phim bat ky de tiep tuc .....";
+    fflush(stdin);
+    getchar();
 }

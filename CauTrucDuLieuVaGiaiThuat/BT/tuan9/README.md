@@ -1,6 +1,6 @@
 # BT (Bài tập)
 
-## Tuần 7
+## Tuần 9
 
 
 ![tuan9_1](../../img/tuan9_1.png)

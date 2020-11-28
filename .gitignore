@@ -32,4 +32,6 @@
 *.app
 
 .gitignore
-/exe
+*/exe
+CodeForces
+Training
