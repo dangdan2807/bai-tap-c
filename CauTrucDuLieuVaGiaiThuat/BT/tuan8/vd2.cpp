@@ -144,9 +144,7 @@ int insertNode(Tree &t, item x)
     }
     else if (t != NULL)
     {
-        if (compare(t->key, x) == 0)
-            return -1;
-        else if (compare(t->key, x) < 0)
+        if (compare(t->key, x) < 0)
             return insertNode(t->pLeft, x);
         else
             return insertNode(t->pRight, x);
@@ -281,7 +279,6 @@ int xoaNode(Tree &t, char masv[20])
         return xoaNode(t->pLeft, masv);
     else
     {
-        Node *p = t;
         if (t->pLeft == NULL)
             t = t->pRight;
         else if (t->pRight == NULL)

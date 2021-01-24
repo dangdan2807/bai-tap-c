@@ -35,15 +35,15 @@ void init(List &l);
 Node *getNode(SinhVien x);
 void addFirst(List &l, Node *temp);
 void addLast(List &l, Node *temp);
-void InsertFirst(List &l, SinhVien x);               
-void InsertAfter(List &l, Node *q, SinhVien x); 
+void InsertFirst(List &l, SinhVien x);
+void InsertAfter(List &l, Node *q, SinhVien x);
 void InsertLast(List &l, SinhVien x);
 int InsertLast_KhongTrung(List &l, SinhVien x);
 int Search(List l, int x);
 
 void NhapSinhVien(SinhVien &x);
-void NhapDSSV(List &l);        
-void XuatSinhVien(SinhVien s); 
+void NhapDSSV(List &l);
+void XuatSinhVien(SinhVien s);
 void XuatDSSV(List l);
 
 void VietVaoFile(SinhVien x, ofstream &outFile);
@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
     string temp;
     fflush(stdin);
     getline(cin, temp);
-    Node* p = timTheoTen(l, temp);
+    Node *p = timTheoTen(l, temp);
     XuatSinhVien(p->data);
 
     cout << "\nsap xep danh sach tang dan theo diem";
@@ -144,11 +144,11 @@ void InsertFirst(List &l, SinhVien x)
 void InsertAfter(List &l, Node *q, SinhVien x)
 {
     Node *temp = getNode(x);
-    if(q!= NULL)
+    if (q != NULL)
     {
         temp->link = q->link;
         q->link = temp;
-        if(q == l.last)
+        if (q == l.last)
             l.last = temp;
     }
 }
@@ -223,7 +223,7 @@ void NhapDSSV(List &l)
         NhapSinhVien(x);
         if (l.first == NULL)
             InsertLast_KhongTrung(l, sv1);
-            // ThemCoThuTu(l, sv1);
+        // ThemCoThuTu(l, sv1);
         else
         {
             ThemCoThuTu_KhongTrungMa(l, x);
@@ -258,21 +258,21 @@ void XuatDSSV(List l)
 
 void VietVaoFile(SinhVien x, ofstream &outFile)
 {
-	outFile << x.maSV << "|";
-	outFile << x.hoTen << "|";
-	outFile << x.gioiTinh << "|";
-	outFile << x.ngaySinh.ngay << "/" << x.ngaySinh.thang << "/" << x.ngaySinh.nam << "|";
-	outFile << x.diemTB << "|";
-	outFile << x.diaChi << endl;
+    outFile << x.maSV << "|";
+    outFile << x.hoTen << "|";
+    outFile << x.gioiTinh << "|";
+    outFile << x.ngaySinh.ngay << "/" << x.ngaySinh.thang << "/" << x.ngaySinh.nam << "|";
+    outFile << x.diemTB << "|";
+    outFile << x.diaChi << endl;
 }
 
 void VietDSSVVaoFile(List l)
 {
-	ofstream outFile;
-	outFile.open("data.txt", ios_base::out);
-	// check_file(outFile);
-	for (Node *i = l.first; i != NULL; i = i->link)
-		VietVaoFile(i->data, outFile);
+    ofstream outFile;
+    outFile.open("data.txt", ios_base::out);
+    // check_file(outFile);
+    for (Node *i = l.first; i != NULL; i = i->link)
+        VietVaoFile(i->data, outFile);
     outFile.close();
 }
 
@@ -351,7 +351,7 @@ void interChangeSortList(List &l)
 Node *timThem(List l, SinhVien x)
 {
     Node *p = l.first;
-    while (p != l.last && (p->link->data.maSV < x.maSV))
+    while (p != l.last && strcmp(p->link->data.maSV, x.maSV) < 0)
         p = p->link;
     return p;
 }
@@ -360,7 +360,7 @@ Node *timTheoTen(List l, string x)
 {
     for (Node *i = l.first; i != NULL; i = i->link)
     {
-        if(i->data.hoTen.compare(x) == 0)
+        if (i->data.hoTen.compare(x) == 0)
             return i;
     }
     return NULL;
@@ -379,20 +379,20 @@ void ThemCoThuTu(List &l, SinhVien x)
 
 int ThemCoThuTu_KhongTrungMa(List &l, SinhVien x)
 {
-    if(x.maSV == l.first->data.maSV)
+    if (x.maSV == l.first->data.maSV)
         return 0;
-    if(x.maSV < l.first->data.maSV)
+    if (x.maSV < l.first->data.maSV)
     {
         InsertFirst(l, x);
         return 1;
     }
     Node *p = timThem(l, x);
-    if(p->link == NULL)
+    if (p->link == NULL)
     {
         InsertAfter(l, p, x);
         return 1;
     }
-    if(p->link->data.maSV > x.maSV)
+    if (p->link->data.maSV > x.maSV)
     {
         InsertAfter(l, p, x);
         return 1;
