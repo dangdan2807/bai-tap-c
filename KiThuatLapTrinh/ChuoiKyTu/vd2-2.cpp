@@ -17,24 +17,16 @@ int main()
 
 void standard(char s[])
 {
-	int n = strlen(s);
-	for(int i = 0; i<n; i++)
+	int i=0, j = strlen(s) ;
+	while (s[i]==' ')i++;
+	while (s[j-1]==' ')j--;
+	s[j]='\0';
+	for(j=0;i<strlen(s);i++)
 	{
-		if(s[0] == ' ')
-		{
-			for(int j = 0; j < n; j++ )
-				s[j] = s[j+1];
-			i--;
-		}
-		else if(s[i] == ' ' && s[i+1] == ' ')
-		{
-			for(int j= i; j<n; j++)
-				s[j] = s[j+1];
-			i--;
-		}
-		else if(s[i] == ' ' && s[i+1] == '\0')
-		{
-			s[i] = '\0';
-		}
+		if((s[i]==' ')&&(s[i+1]==' '))
+			continue;
+			s[j]=s[i];
+			j++;
 	}
+    s[j]='\0';
 }

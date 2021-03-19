@@ -32,6 +32,8 @@
 *.app
 
 .gitignore
-*/exe
+*bin
 CodeForces
 Training
+*/.vscode
+*bt
