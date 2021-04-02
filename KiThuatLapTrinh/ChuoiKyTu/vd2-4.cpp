@@ -2,36 +2,42 @@
 #include <cstring>
 using namespace std;
 
-int dem_chuoi(char s[]);
-void in_tung_kitu(char s[], int n);
+void CountWord(char s[]);
 
 int main()
 {
 	char s[] = "dep trai  vo dich vu tru";
-	cout <<"Chuoi ban dau: \n" << s;
-	int n = dem_chuoi(s);
-	cout <<"So ki tu cua chuoi: " <<n;
-	cout <<"\nSau ki tach tung ki tu:\n\n";
-	in_tung_kitu(s, n);
+	cout << "Chuoi ban dau: \n"
+		 << s << endl;
+	CountWord(s);
 	return 0;
 }
 
-int dem_chuoi(char s[])
+void CountWord(char s[])
 {
-	int i= 0;
-	while(s[i] != '\0')
-	{
+	int i = 0, j = strlen(s);
+	while (s[i] == ' ')
 		i++;
-	}
-	return i;
-}
-void in_tung_kitu(char s[], int n)
-{
-	for(int i = 0; i < n; i++)
+	while (s[j - 1] == ' ')
+		j--;
+	s[j] = '\0';
+	for (j = 0; i < strlen(s); i++)
 	{
-		if(s[i] == ' ' && s[i+1] != ' ')
-			cout << endl;
-		else
-			cout << s[i];
+		if ((s[i] == ' ') && (s[i + 1] == ' '))
+			continue;
+		s[j] = s[i];
+		j++;
 	}
+	s[j] = '\0';
+	int d = 0;
+	for (int i = 0; i < strlen(s); i++)
+	{
+		if (s[i] == ' ')
+		{
+			d++;
+			s[i] = '\n';
+		}
+	}
+	printf("co %d tu  : \n", d + 1);
+	puts(s);
 }

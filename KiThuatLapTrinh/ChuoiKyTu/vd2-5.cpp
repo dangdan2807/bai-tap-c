@@ -3,58 +3,41 @@
 #include <cstring>
 using namespace std;
 
-int dem_tu_chuoi(char s[], int n);
-void tu_dainhat(char s[], int dodai[], int vitri[]);
-
+void MaxWord(char s[]);
 
 int main()
 {
 	int a[100];
 	int b[100];
 	char s[] = "dep trai vo dich vu tru";
-	cout <<"Chuoi la:\n" <<s <<"\n";
-	tu_dainhat(s, a, b);
+	cout << "Chuoi la: "
+		 << s << endl;
+	MaxWord(s);
 	return 0;
 }
 
-
-int dem_tu_chuoi(char s[], int n)
+void MaxWord(char s[])
 {
-	int dem = 0;
-	for(int i = n; i < strlen(s); i++)
+	int i, j, l = 0, iMax = 0, lMax = 0;
+	j = strlen(s);
+	s[j] = ' ';
+	s[j + 1] = '\0';
+	for (i = 0; i < strlen(s); i++)
 	{
-		if(s[i] != ' ')
+		if (s[i] == ' ')
 		{
-			dem++;
+			if (l > lMax)
+			{
+				lMax = l;
+				iMax = i - lMax;
+			}
+			l = 0;
 		}
 		else
-			break;
+			l++;
 	}
-	return dem;
-}
-void tu_dainhat(char s[], int dodai[], int vitri[])
-{
-	int so_tu = strlen(s);
-	int j=0;
-	for(int i=0;  i < so_tu; i++)
-	{
-		if(s[i] == ' ')
-		{
-			vitri[j] = i+1;
-			dodai[j] = dem_tu_chuoi(s, i+1);
-			j++;
-		}
-	} 
-	
-	int temp, max;
-	for(int i= 1; i<j; i++)
-	{
-		if(max < dodai[i])
-		{
-			max = dodai[i];
-			temp = vitri[i];
-		}
-	}
-	for(int i = temp; i<= max+temp -1; i++)
-		cout <<s[i];
+	printf("Tu dai nhat la : ");
+	for (i = iMax; i < iMax + lMax; i++)
+		printf("%c", s[i]);
+	printf("\nco chieu dai la %d ky tu", lMax);
 }

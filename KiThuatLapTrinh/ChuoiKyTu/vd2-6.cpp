@@ -2,66 +2,33 @@
 #include <cstring>
 using namespace std;
 
-void trich_kitu_dau(char s[], int n);
-void trich_kitu_cuoi(char s[], int n);
-
+void PrintNKiTu(char s[], int n, int k);
 
 int main()
 {
-	char s[] ="dep trai vo dich vu tru";
-	int n = strlen(s);
-	cout  <<"Nhap vi tri (0 < x < " <<n-1 <<"): ";
-	int pos;
-	do{
-		cin >> pos;
-		if(pos < 0 || pos >= n)
-			cout <<"Du lieu khong hop le, nhap lai: ";
-	}while(pos < 0 || pos >= n);
-	cout <<"chuoi la: \n" <<s <<"\n\n";
-	cout <<"ki tu dau cua tu tai vi tri " <<pos <<" cua chuoi la:\n";
-	trich_kitu_dau(s, pos);
-	cout <<"\n\nki tu cuoi cua tu tai vi tri " <<pos <<" cua chuoi la:\n";
-	trich_kitu_cuoi(s, pos);
+	char s[] = "dep trai vo dich vu tru";
+	int n, k;
+	cout << "chuoi la: " << s << endl;
+	cout << "len(s) = " << strlen(s) << endl;
+	PrintNKiTu(s, n, k);
 	return 0;
 }
 
-
-void trich_kitu_dau(char s[], int n)
+void PrintNKiTu(char s[], int n, int k)
 {
-	if(s[n] == ' ' && s[n] != '\0')
+	int i;
+	do
 	{
-		cout <<s[n+1];
-	}
-	else if(n == 0 && s[n] != '\0' && s[n] != ' ')
-	{
-		cout <<s[0];
-	}
-	else
-	{
-		for(int i = n; i >= 0; i--)
-		{
-			if(s[i] == ' ' && s[i] != '\0')
-			{
-				cout <<s[i+1];
-				break;
-			}
-			else if(i == 0 && s[i] != '\0' && s[i] != ' ')
-			{
-				cout <<s[0];
-				break;
-			}
-		}
-	}
-}
+		printf("Nhap vi tri bat dau 0 <= k < len(s) : ");
+		scanf("%d", &k);
+	} while (k < 0 || k >= strlen(s));
 
-void trich_kitu_cuoi(char s[], int n)
-{
-	for(int i = n; i >= 0; i++)
+	do
 	{
-		if(s[i] == ' ' && s[i] != '\0')
-		{
-			cout <<s[i-1];
-			break;
-		}
-	}
+		printf("Nhap chieu dai can in n (k+n < len(s) : ");
+		scanf("%d", &n);
+	} while (k + n > strlen(s));
+
+	for (i = k; i < k + n; i++)
+		printf("%c", s[i]);
 }
