@@ -9,6 +9,7 @@ int main()
 	printf("\nNhap chuoi ki tu s1: ");
 	fflush(stdin);
 	gets(s1);
+	printf("Chuoi sau khi nhap: ");
 	puts(s1);
 	printf("\n");
 	printf("Nhap chuoi ki tu s2: ");
