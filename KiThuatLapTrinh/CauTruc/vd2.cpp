@@ -13,9 +13,9 @@ typedef Point PointArray[max];
 
 float P1P2(Point P1, Point P2);
 float SP1P2P3(Point P1, Point P2, Point P3);
-void enter_1_point(Point &A, int i);
+void enter_point(Point &A, int i);
 void enter_point_array(Point A[], int n);
-void export_1_point(Point &A, int i);
+void xuatDiem(Point &A, int i);
 void export_point_array(Point A[], int n);
 int pnPoly(int nVert, PointArray vert, float testX, float testY);
 float S(PointArray A, int n);
@@ -58,7 +58,7 @@ float SP1P2P3(Point P1, Point P2, Point P3)
     return S;
 }
 
-void enter_1_point(Point &A, int i)
+void enter_point(Point &A, int i)
 {
     cout << "x" << i << "= ";
     cin >> A.x;
@@ -71,11 +71,11 @@ void enter_point_array(Point A[], int n)
     for (int i = 0; i < n; i++)
     {
         cout << "Nhap toa do diem A" << i << ":\n";
-        enter_1_point(A[i], i);
+        enter_point(A[i], i);
     }
 }
 
-void export_1_point(Point &A, int i)
+void xuatDiem(Point &A, int i)
 {
     cout << "x" << i << "= " << A.x;
     cout << "\ty" << i << "= " << A.y;
@@ -87,7 +87,7 @@ void export_point_array(Point A[], int n)
     for (int i = 0; i < n; i++)
     {
         cout << "\nToa do diem A" << i << ":\n";
-        export_1_point(A[i], i);
+        xuatDiem(A[i], i);
     }
 }
 
