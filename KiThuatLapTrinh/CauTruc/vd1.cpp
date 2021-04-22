@@ -4,30 +4,30 @@
 #include <algorithm>
 using namespace std;
 
-typedef struct ps
+typedef struct PhanSo
 {
     int tuSo;
     int mauSo;
 } PS;
 
-void input(PS &phanSo);
-void output(PS phanSo);
+void nhapMotPS(PS &phanSo);
+void xuatMotPS(PS phanSo);
 int ucln(int a, int b);
 void toiGian(PS &phanSo);
 
 int main()
 {
     PS p;
-    input(p);
+    nhapMotPS(p);
     printf("\nPhan so vua nhap: ");
-    output(p);
+    xuatMotPS(p);
     toiGian(p);
     printf("\nPhan so sau khi toi gian: ");
-    output(p);
+    xuatMotPS(p);
     return 0;
 }
 
-void input(PS &phanSo)
+void nhapMotPS(PS &phanSo)
 {
     cout << "Nhap tu so: ";
     cin >> phanSo.tuSo;
@@ -35,7 +35,7 @@ void input(PS &phanSo)
     cin >> phanSo.mauSo;
 }
 
-void output(PS phanSo)
+void xuatMotPS(PS phanSo)
 {
     if (phanSo.mauSo == 1)
         cout << phanSo.tuSo;
@@ -43,7 +43,7 @@ void output(PS phanSo)
     {
         phanSo.mauSo *= -1;
         phanSo.tuSo *= -1;
-        output(phanSo);
+        xuatMotPS(phanSo);
     }
     else
         cout << phanSo.tuSo << "\\" << phanSo.mauSo;
@@ -51,12 +51,12 @@ void output(PS phanSo)
 
 int ucln(int a, int b)
 {
-    int tmp;
+    int temp;
     while (b != 0)
     {
-        tmp = a % b;
+        temp = a % b;
         a = b;
-        b = tmp;
+        b = temp;
     }
     return a;
 }

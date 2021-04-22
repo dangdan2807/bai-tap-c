@@ -41,8 +41,7 @@ int main()
 
 float P1P2(Point P1, Point P2)
 {
-    float AB = sqrt(pow(P1.x - P2.x, 2) + pow(P1.y - P2.y, 2));
-    return AB;
+    return sqrt(pow(P1.x - P2.x, 2) + pow(P1.y - P2.y, 2));
 }
 
 float SP1P2P3(Point P1, Point P2, Point P3)

@@ -15,7 +15,7 @@ typedef struct HocVien
 	float d_win = 0, d_word = 0, d_excel = 0, tongdiem;
 } HV;
 
-void printf(int n);
+void print(int n);
 void enterInfoHv(HV &x);
 void showInfoHv(HV x, int i);
 void nhapMangHv(HV x[], int &n);
@@ -63,7 +63,7 @@ int main()
 	return 0;
 }
 
-void printf(int n)
+void print(int n)
 {
 	for (int i = 0; i < n; i++)
 		cout << "-";
@@ -101,13 +101,13 @@ void nhapMangHv(HV x[], int &n)
 void xuatMangHv(HV X[], int n)
 {
 	cout << "\n\tDanh Sach Hoc Vien:\n";
-	printf(65);
+	print(65);
 	cout << "| STT |  Ho va Ten \t|  Ngay Sinh  | Noi Sinh   |  Ghi Chu  |\n";
-	printf(65);
+	print(65);
 	for (int i = 0; i < n; i++)
 	{
 		showInfoHv(X[i], i);
-		printf(65);
+		print(65);
 	}
 	getchar();
 }
@@ -185,9 +185,9 @@ void ranks(HV &x)
 
 void xuatXepHang(HV x[], int n)
 {
-	printf(65);
+	print(65);
 	cout << "| STT |  Ho va Ten\t|   Diem   |  Tong  |  Xep Loai  |\n";
-	printf(65);
+	print(65);
 	for (int i = 0; i < n; i++)
 	{
 		TongDiem(x[i]);
@@ -196,7 +196,7 @@ void xuatXepHang(HV x[], int n)
 		cout << "\t| " << x[i].d_win << ", " << x[i].d_word << ", " << x[i].d_excel;
 		cout << "  |  " << x[i].tongdiem;
 		cout << "  |  " << x[i].x_loai << "  |\n";
-		printf(65);
+		print(65);
 	}
 	getchar();
 };

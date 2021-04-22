@@ -149,7 +149,8 @@ void tinhDienTich(Hcn A[], int n)
 	dungMangHinh();
 }
 
-void dungMangHinh() {
+void dungMangHinh()
+{
 	cout << "\nNhan enter de tiep tuc\n";
 	getchar();
 }
