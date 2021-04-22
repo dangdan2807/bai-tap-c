@@ -14,9 +14,9 @@ typedef struct Sinhvien
 
 void check_file(fstream& file);
 void enter_info_sv(SV& x);
-void enter_info_array_sv(SV A[], int& n);
+void nhapMangSV(SV A[], int& n);
 void export_info_sv(SV x);
-void export_info_array_sv(SV A[], int n, int id);
+void xuatMangSV(SV A[], int n, int id);
 void write_to_file(SV A[], int n, fstream& outfile);
 void read_to_file(SV A[], int n, fstream& infile);
 void update_info_sv(SV A[], int n, fstream& outfile);
@@ -54,7 +54,7 @@ int main()
 				system("clear");
 				//system("cls");
 				cout << "\tNHAP DANH SACH SINH VIEN";
-				enter_info_array_sv(ArrayA, n);
+				nhapMangSV(ArrayA, n);
 				check_nhap = true;
 				getchar();
 				break;
@@ -64,7 +64,7 @@ int main()
 				if (check_nhap == false)
 					cout << "Chua nhap danh sach thong tin sinh vien";
 				else
-					export_info_array_sv(ArrayA, n, 0);
+					xuatMangSV(ArrayA, n, 0);
 				getchar();
 				break;
 			case 3:
@@ -90,7 +90,7 @@ int main()
 				{
 					output_file.open(address, ios_base::out);
 					check_file(output_file);
-					export_info_array_sv(ArrayA, n, 0);
+					xuatMangSV(ArrayA, n, 0);
 					check_xuat = true;
 					write_to_file(ArrayA, n, output_file);
 					output_file.close();
@@ -109,7 +109,7 @@ int main()
 					input_file.open(address, ios_base:: in);
 					check_file(input_file);
 					read_to_file(ArrayB, n, input_file);
-					export_info_array_sv(ArrayB, n, 0);
+					xuatMangSV(ArrayB, n, 0);
 					input_file.close();
 				}
 				getchar();
@@ -148,7 +148,7 @@ void enter_info_sv(SV& x)
 	cin.ignore(32767, '\n');
 }
 
-void enter_info_array_sv(SV A[], int& n)
+void nhapMangSV(SV A[], int& n)
 {
 	cout << "\nNhap so luong sinh vien: ";
 	cin >> n;
@@ -165,7 +165,7 @@ void export_info_sv(SV x)
 	cout << "    |    " << x.diem_tin << "    |";
 }
 
-void export_info_array_sv(SV A[], int n, int id)
+void xuatMangSV(SV A[], int n, int id)
 {
 	cout << "\n\tXUAT THONG TIN SINH VIEN:";
 	cout << "\n|  STT  |  Ho ten lot\t|  Ten\t|  Diem Toan |  Diem Tin |";
@@ -237,7 +237,7 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 		case 1:
 			system("clear");
 			//system("cls");
-			export_info_array_sv(A, n, id);
+			xuatMangSV(A, n, id);
 			cout << "\nNhap so thu tu can doi: ";
 			cin >> id;
 			id--;
@@ -318,6 +318,6 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 		}
 	} while (luachon != 0 || luachon < 0 || luachon > 6);
 	cout << "\n\tTHONG TIN SAU KHI DA CAP NHAT: \n";
-	export_info_array_sv(A, n, id);
+	xuatMangSV(A, n, id);
 	write_to_file(A, n, outfile);
 }

@@ -15,13 +15,13 @@ typedef struct SinhVien
 void kiemTra(float &a);
 void print(int n);
 float average_score(SV a);
-void enter_info_1_sv(SV &sinhVien);
-void export_info_1_sv(SV sinhVien, int i);
-void export_info_1_sv_2(SV sinhVien);
-void enter_info_array_sv(SV A[], int &n);
-void export_info_array_sv(SV A[], int n);
-int find_info_1_sv(SV A[], int n);
-void export_info_from_find(SV A[], int n);
+void nhap1SV(SV &sinhVien);
+void xuat1SV(SV sinhVien, int i);
+void xuat1SV2(SV sinhVien);
+void nhapMangSV(SV A[], int &n);
+void xuatMangSV(SV A[], int n);
+int timSV(SV A[], int n);
+void xuatTTSvTimDuoc(SV A[], int n);
 void arrange_score(SV A[], int n);
 void hoc_lai(float x);
 void export_1_sv_ktlt(SV x, int i);
@@ -51,16 +51,16 @@ int main()
 		switch (lua_chon)
 		{
 		case 1:
-			enter_info_array_sv(A, n);
+			nhapMangSV(A, n);
 			//getchar(); getchar();
 			break;
 		case 2:
-			export_info_array_sv(A, n);
+			xuatMangSV(A, n);
 			getchar();
 			getchar();
 			break;
 		case 3:
-			export_info_from_find(A, n);
+			xuatTTSvTimDuoc(A, n);
 			getchar();
 			getchar();
 			break;
@@ -110,7 +110,7 @@ float average_score(SV a)
 	return dtb;
 }
 
-void enter_info_1_sv(SV &sinhVien)
+void nhap1SV(SV &sinhVien)
 {
 	cout << "Nhap ho va ten: ";
 	fflush(stdin);
@@ -134,7 +134,7 @@ void enter_info_1_sv(SV &sinhVien)
 	sinhVien.dtb = average_score(sinhVien);
 }
 
-void export_info_1_sv(SV sinhVien, int i)
+void xuat1SV(SV sinhVien, int i)
 {
 	cout << "| " << i << " |";
 	cout << "\t" << sinhVien.name << "\t|";
@@ -142,7 +142,7 @@ void export_info_1_sv(SV sinhVien, int i)
 	cout << "\t" << sinhVien.dtb << "  |";
 }
 
-void export_info_1_sv_2(SV sinhVien)
+void xuat1SV2(SV sinhVien)
 {
 	cout << "\nHo va ten: " << sinhVien.name;
 	cout << "\nMa sinh vien: " << sinhVien.id_sv;
@@ -153,7 +153,7 @@ void export_info_1_sv_2(SV sinhVien)
 	cout << "\nDiem trung binh: " << sinhVien.dtb;
 }
 
-void enter_info_array_sv(SV A[], int &n)
+void nhapMangSV(SV A[], int &n)
 {
 	cout << "\tNHAP THONG TIN DANH SACH SINH VIEN:\n";
 	cout << "\nNhap So Luong Sinh Vien: ";
@@ -167,12 +167,12 @@ void enter_info_array_sv(SV A[], int &n)
 	for (int i = 0; i < n; i++)
 	{
 		cout << "\n\tNhap thong tin sinh vien thu " << i + 1 << ":\n";
-		enter_info_1_sv(A[i]);
+		nhap1SV(A[i]);
 	}
 	//getchar();
 }
 
-void export_info_array_sv(SV A[], int n)
+void xuatMangSV(SV A[], int n)
 {
 	cout << "\n\n\tXUAT DANH SACH THONG TIN SINH VIEN:\n";
 	print(65);
@@ -180,13 +180,13 @@ void export_info_array_sv(SV A[], int n)
 	print(65);
 	for (int i = 0; i < n; i++)
 	{
-		export_info_1_sv(A[i], i + 1);
+		xuat1SV(A[i], i + 1);
 		print(65);
 	}
 	//getchar();
 }
 
-int find_info_1_sv(SV A[], int n)
+int timSV(SV A[], int n)
 {
 	int msv;
 	cout << "\n\tTim thong tin sinh vien:\n";
@@ -203,13 +203,13 @@ int find_info_1_sv(SV A[], int n)
 	return -1;
 }
 
-void export_info_from_find(SV A[], int n)
+void xuatTTSvTimDuoc(SV A[], int n)
 {
-	int id = find_info_1_sv(A, n);
+	int id = timSV(A, n);
 	if (id == -1)
 		cout << "\nKhong tim thay!";
 	else
-		export_info_1_sv_2(A[id]);
+		xuat1SV2(A[id]);
 	//getchar();
 }
 

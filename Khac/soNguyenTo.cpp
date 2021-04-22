@@ -1,5 +1,6 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <time.h>
+// #include <bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ll;
 
@@ -87,8 +88,8 @@ bool miller_rabin(ll n)
 
 int main(int argc, char const *argv[])
 {
-    ll n, m;
-    n = 96832323092641963234243123;
+    ll m;
+    long long n = 96832323092641963234243123;
     cout << soNguyenTo(n) << endl;
     float a;
     clock_t time_req;
