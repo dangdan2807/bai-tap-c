@@ -102,11 +102,7 @@ void print(int n)
 
 float average_score(SV a)
 {
-	float TK = a.tk;
-	float GK = a.gk;
-	float CK = a.ck;
-	float TH = a.th;
-	float dtb = ((((2 * TK + 3 * GK + 5 * CK) / 10) * 2) + TH) / 3;
+	float dtb = ((((2 * a.tk + 3 * a.gk + 5 * a.ck) / 10) * 2) + a.th) / 3;
 	return dtb;
 }
 
