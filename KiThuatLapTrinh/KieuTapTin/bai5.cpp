@@ -6,27 +6,27 @@
 using namespace std;
 #define MAX 100
 
-typedef struct Sinhvien
+typedef struct SinhVien
 {
-	char holot[50], ten[50];
-	float diem_toan, diem_tin;
-}SV;
+	char hoLot[50], ten[50];
+	float diemToan, diemTin;
+} SV;
 
-void check_file(fstream& file);
-void enter_info_sv(SV& x);
-void nhapMangSV(SV A[], int& n);
-void export_info_sv(SV x);
+void checkFile(fstream &file);
+void enterInfoSinhVien(SV &x);
+void nhapMangSV(SV A[], int &n);
+void exportInfoSinhVien(SV x);
 void xuatMangSV(SV A[], int n, int id);
-void write_to_file(SV A[], int n, fstream& outfile);
-void read_to_file(SV A[], int n, fstream& infile);
-void update_info_sv(SV A[], int n, fstream& outfile);
+void writeToFile(SV A[], int n, fstream &outfile);
+void readToFile(SV A[], int n, fstream &infile);
+void update_info_sv(SV A[], int n, fstream &outfile);
 
 int main()
 {
-	const char* address = "output//bai5.dat";
+	const char *address = "output//bai5.dat";
 	fstream input_file, output_file;
 	SV ArrayA[MAX], ArrayB[MAX];
-	int n, luachon;
+	int n, luaChon;
 	bool check_nhap = false, check_xuat = false;
 	do
 	{
@@ -41,91 +41,91 @@ int main()
 		cout << "\n0. Thoat";
 		cout << "\n==========================";
 		cout << "\nNhap lua chon: ";
-		cin >> luachon;
+		cin >> luaChon;
 		cin.ignore(31767, '\n');
-		switch (luachon)
+		switch (luaChon)
 		{
-			case 0:
-				system("clear");
-				//system("cls");
-				cout << "Ket thuc chuong trinh.";
-				break;
-			case 1:
-				system("clear");
-				//system("cls");
-				cout << "\tNHAP DANH SACH SINH VIEN";
-				nhapMangSV(ArrayA, n);
-				check_nhap = true;
-				getchar();
-				break;
-			case 2:
-				system("clear");
-				//system("cls");
-				if (check_nhap == false)
-					cout << "Chua nhap danh sach thong tin sinh vien";
-				else
-					xuatMangSV(ArrayA, n, 0);
-				getchar();
-				break;
-			case 3:
-				system("clear");
-				//system("cls");
-				if (check_nhap == false)
-					cout << "Chua nhap danh sach thong tin sinh vien";
-				else
-				{
-					output_file.open(address, ios_base:: out);
-					check_file(output_file);
-					update_info_sv(ArrayA, n, output_file);
-					output_file.close();
-				}
-				getchar();
-				break;
-			case 4:
-				system("clear");
-				//system("cls");
-				if (check_nhap == false)
-					cout << "Chua nhap danh sach thong tin sinh vien";
-				else
-				{
-					output_file.open(address, ios_base::out);
-					check_file(output_file);
-					xuatMangSV(ArrayA, n, 0);
-					check_xuat = true;
-					write_to_file(ArrayA, n, output_file);
-					output_file.close();
-				}
-				getchar();
-				break;
-			case 5:
-				system("clear");
-				//system("cls");
-				if (check_nhap == false)
-					cout << "Chua nhap danh sach thong tin sinh vien";
-				else if (check_xuat == false)
-					cout << "Chua xuat danh sach thong tin sinh vien";
-				else
-				{
-					input_file.open(address, ios_base:: in);
-					check_file(input_file);
-					read_to_file(ArrayB, n, input_file);
-					xuatMangSV(ArrayB, n, 0);
-					input_file.close();
-				}
-				getchar();
-				break;
-			default:
-				system("clear");
-				//system("cls");
-				cout << "Lua chon khong hop le";
-				getchar();
-				break;
+		case 0:
+			system("clear");
+			//system("cls");
+			cout << "Ket thuc chuong trinh.";
+			break;
+		case 1:
+			system("clear");
+			//system("cls");
+			cout << "\tNHAP DANH SACH SINH VIEN";
+			nhapMangSV(ArrayA, n);
+			check_nhap = true;
+			getchar();
+			break;
+		case 2:
+			system("clear");
+			//system("cls");
+			if (check_nhap == false)
+				cout << "Chua nhap danh sach thong tin sinh vien";
+			else
+				xuatMangSV(ArrayA, n, 0);
+			getchar();
+			break;
+		case 3:
+			system("clear");
+			//system("cls");
+			if (check_nhap == false)
+				cout << "Chua nhap danh sach thong tin sinh vien";
+			else
+			{
+				output_file.open(address, ios_base::out);
+				checkFile(output_file);
+				update_info_sv(ArrayA, n, output_file);
+				output_file.close();
+			}
+			getchar();
+			break;
+		case 4:
+			system("clear");
+			//system("cls");
+			if (check_nhap == false)
+				cout << "Chua nhap danh sach thong tin sinh vien";
+			else
+			{
+				output_file.open(address, ios_base::out);
+				checkFile(output_file);
+				xuatMangSV(ArrayA, n, 0);
+				check_xuat = true;
+				writeToFile(ArrayA, n, output_file);
+				output_file.close();
+			}
+			getchar();
+			break;
+		case 5:
+			system("clear");
+			//system("cls");
+			if (check_nhap == false)
+				cout << "Chua nhap danh sach thong tin sinh vien";
+			else if (check_xuat == false)
+				cout << "Chua xuat danh sach thong tin sinh vien";
+			else
+			{
+				input_file.open(address, ios_base::in);
+				checkFile(input_file);
+				readToFile(ArrayB, n, input_file);
+				xuatMangSV(ArrayB, n, 0);
+				input_file.close();
+			}
+			getchar();
+			break;
+		default:
+			system("clear");
+			//system("cls");
+			cout << "Lua chon khong hop le";
+			getchar();
+			break;
 		}
-	} while (luachon != 0);
+	} while (luaChon != 0);
 	return 0;
 }
 
-void check_file(fstream& file)
+void checkFile(fstream &file)
 {
 	if (file.fail() == true)
 	{
@@ -134,35 +134,35 @@ void check_file(fstream& file)
 	}
 }
 
-void enter_info_sv(SV& x)
+void enterInfoSinhVien(SV &x)
 {
 	cout << "\nNhap ho ten lot: ";
-	gets(x.holot);
+	gets(x.hoLot);
 	cout << "Nhap ten: ";
 	fflush(stdin);
 	gets(x.ten);
 	cout << "Nhap diem toan: ";
-	cin >> x.diem_toan;
+	cin >> x.diemToan;
 	cout << "Nhap diem tin: ";
-	cin >> x.diem_tin;
+	cin >> x.diemTin;
 	cin.ignore(32767, '\n');
 }
 
-void nhapMangSV(SV A[], int& n)
+void nhapMangSV(SV A[], int &n)
 {
 	cout << "\nNhap so luong sinh vien: ";
 	cin >> n;
 	cin.ignore(32767, '\n');
 	for (int i = 0; i < n; i++)
-		enter_info_sv(A[i]);
+		enterInfoSinhVien(A[i]);
 }
 
-void export_info_sv(SV x)
+void exportInfoSinhVien(SV x)
 {
-	cout << "|  " << x.holot << "\t";
+	cout << "|  " << x.hoLot << "\t";
 	cout << "|  " << x.ten << "\t";
-	cout << "|    " << x.diem_toan;
-	cout << "    |    " << x.diem_tin << "    |";
+	cout << "|    " << x.diemToan;
+	cout << "    |    " << x.diemTin << "    |";
 }
 
 void xuatMangSV(SV A[], int n, int id)
@@ -172,50 +172,51 @@ void xuatMangSV(SV A[], int n, int id)
 	if (id != 0)
 	{
 		cout << "\n| " << id + 1 << " ";
-		export_info_sv(A[id]);
+		exportInfoSinhVien(A[id]);
 	}
-	else if(id == 0)
+	else if (id == 0)
 	{
 		for (int i = 0; i < n; i++)
 		{
 			cout << "\n| " << i + 1 << " ";
-			export_info_sv(A[i]);
+			exportInfoSinhVien(A[i]);
 		}
 	}
 }
 
-void write_to_file(SV A[], int n, fstream& outfile)
+void writeToFile(SV A[], int n, fstream &outfile)
 {
 	for (int i = 0; i < n; i++)
 	{
-		outfile << A[i].holot << endl;
+		outfile << A[i].hoLot << endl;
 		outfile << A[i].ten << endl;
-		outfile << A[i].diem_toan << endl;
-		outfile << A[i].diem_tin << endl;
+		outfile << A[i].diemToan << endl;
+		outfile << A[i].diemTin << endl;
 	}
 }
 
-void read_to_file(SV A[], int n, fstream& infile)
+void readToFile(SV A[], int n, fstream &infile)
 {
 	int i = 0;
 	while (infile.eof() == false)
 	{
 		if (infile.eof() == true)
 			break;
-		infile.getline(A[i].holot, 50);
+		infile.getline(A[i].hoLot, 50);
 		infile.getline(A[i].ten, 50);
-		infile >> A[i].diem_toan;
-		infile >> A[i].diem_tin;
+		infile >> A[i].diemToan;
+		infile >> A[i].diemTin;
 		infile.ignore(32767, '\n');
 		i++;
 	}
 }
 
-void update_info_sv(SV A[], int n, fstream& outfile)
+void update_info_sv(SV A[], int n, fstream &outfile)
 {
-	int id = 0, luachon;
+	int id = 0, luaChon;
 	bool id_check = false;
-	do {
+	do
+	{
 		system("clear");
 		//system("cls");
 		cout << "===== MENU CAP NHAT =====";
@@ -228,9 +229,9 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 		cout << "\n0. Thoat";
 		cout << "\n=========================";
 		cout << "\nNhap lua chon: ";
-		cin >> luachon;
+		cin >> luaChon;
 		cin.ignore(32767, '\n');
-		switch (luachon)
+		switch (luaChon)
 		{
 		case 0:
 			break;
@@ -254,7 +255,7 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 			{
 				cout << "\tCap nhat ho ten lot";
 				cout << "\nNhap ho ten lot: ";
-				gets(A[id].holot);
+				gets(A[id].hoLot);
 			}
 			getchar();
 			break;
@@ -280,7 +281,7 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 			{
 				cout << "\tCap nhat diem toan";
 				cout << "\nNhap diem toan: ";
-				cin >> A[id].diem_toan;
+				cin >> A[id].diemToan;
 			}
 			getchar();
 			break;
@@ -293,7 +294,7 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 			{
 				cout << "\tCap nhat diem tin";
 				cout << "\nNhap diem tin: ";
-				cin >> A[id].diem_tin;
+				cin >> A[id].diemTin;
 			}
 			getchar();
 			break;
@@ -305,7 +306,7 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 			else
 			{
 				cout << "\tCap nhat toan bo thong tin: ";
-				enter_info_sv(A[id]);
+				enterInfoSinhVien(A[id]);
 			}
 			getchar();
 			break;
@@ -316,8 +317,8 @@ void update_info_sv(SV A[], int n, fstream& outfile)
 			getchar();
 			break;
 		}
-	} while (luachon != 0 || luachon < 0 || luachon > 6);
+	} while (luaChon != 0 || luaChon < 0 || luaChon > 6);
 	cout << "\n\tTHONG TIN SAU KHI DA CAP NHAT: \n";
 	xuatMangSV(A, n, id);
-	write_to_file(A, n, outfile);
+	writeToFile(A, n, outfile);
 }

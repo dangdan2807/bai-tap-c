@@ -30,7 +30,7 @@ typedef struct List
     Node *first, *last;
 } list;
 
-void check_file(ofstream &file);
+void checkFile(ofstream &file);
 void init(List &l);
 Node *getNode(SinhVien x);
 void addFirst(List &l, Node *temp);
@@ -87,7 +87,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-void check_file(ofstream &file);
+void checkFile(ofstream &file);
 
 void init(List &l)
 {
@@ -270,7 +270,7 @@ void VietDSSVVaoFile(List l)
 {
     ofstream outFile;
     outFile.open("data.txt", ios_base::out);
-    // check_file(outFile);
+    // checkFile(outFile);
     for (Node *i = l.first; i != NULL; i = i->link)
         VietVaoFile(i->data, outFile);
     outFile.close();
