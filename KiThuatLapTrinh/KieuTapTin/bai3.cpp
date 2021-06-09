@@ -7,17 +7,17 @@ using namespace std;
 
 void checkFile(fstream &file);
 void enterArray(float A[], int &n);
-void writeToFile(float A[], int n, fstream &fileout);
-void writeToEndFile(float A[], int &n, fstream &fileout);
+void writeToFile(float A[], int n, fstream &fileOutput);
+void writeToEndFile(float A[], int &n, fstream &fileOutput);
 void updateValue(float A[], int &n);
-void readToFile(float A[], int &n, fstream &filein);
-void exportArray(float A[], int n);
+void readToFile(float A[], int &n, fstream &fileInput);
+void outputArray(float A[], int n);
 float sum(float A[], int n);
 
 int main()
 {
-	fstream filein, fileout, file_add_end;
-	const char *address = "output//bai3.txt";
+	fstream fileInput, fileOutput, fileAddEnd;
+	const char *pathInput = "output/bai3.txt";
 	float array_write[100];
 	float array_read[100];
 	int n, luaChon, danh_dau = 0;
@@ -58,10 +58,10 @@ int main()
 			}
 			else
 			{
-				file_add_end.open(address, ios_base::app);
-				checkFile(file_add_end);
-				writeToEndFile(array_write, n, file_add_end);
-				file_add_end.close();
+				fileAddEnd.open(pathInput, ios_base::app);
+				checkFile(fileAddEnd);
+				writeToEndFile(array_write, n, fileAddEnd);
+				fileAddEnd.close();
 				danh_dau = 1;
 			}
 			break;
@@ -75,31 +75,31 @@ int main()
 			}
 			else
 			{
-				fileout.open(address, ios_base::out);
-				checkFile(fileout);
+				fileOutput.open(pathInput, ios_base::out);
+				checkFile(fileOutput);
 				updateValue(array_write, n);
-				writeToFile(array_write, n, fileout);
-				fileout.close();
+				writeToFile(array_write, n, fileOutput);
+				fileOutput.close();
 			}
 			break;
 		case 4:
 			system("clear");
-			fileout.open(address, ios_base::out);
-			checkFile(fileout);
+			fileOutput.open(pathInput, ios_base::out);
+			checkFile(fileOutput);
 			cout << "\nViet danh sach so thuc vao file";
-			writeToFile(array_write, n, fileout);
-			fileout.close();
+			writeToFile(array_write, n, fileOutput);
+			fileOutput.close();
 			break;
 		case 5:
 			system("clear");
-			filein.open(address, ios_base::in);
-			checkFile(filein);
-			readToFile(array_read, n, filein);
-			filein.close();
+			fileInput.open(pathInput, ios_base::in);
+			checkFile(fileInput);
+			readToFile(array_read, n, fileInput);
+			fileInput.close();
 			break;
 		case 6:
 			system("clear");
-			exportArray(array_read, n);
+			outputArray(array_read, n);
 			getchar();
 			break;
 		case 7:
@@ -153,28 +153,21 @@ void enterArray(float A[], int &n)
 	}
 }
 
-void writeToFile(float A[], int n, fstream &fileout)
+void writeToFile(float A[], int n, fstream &fileOutput)
 {
 	for (int i = 0; i < n; i++)
 	{
-		if (i == n - 1)
-		{
-			cout << "\nDa viet du lieu vao file.";
-			fileout << A[i];
-		}
-		else
-			fileout << A[i] << endl;
+		fileOutput << A[i] << endl;
 	}
-	getchar();
 }
 
-void writeToEndFile(float A[], int &n, fstream &fileout)
+void writeToEndFile(float A[], int &n, fstream &fileOutput)
 {
 	cout << "\n\tThem so thuc vao cuoi danh sach so thuc va file:";
 	cout << "\nNhap so thuc: ";
 	cin >> A[n];
-	fileout << endl
-			<< A[n];
+	fileOutput << endl
+			   << A[n];
 	n++;
 	cout << "\nDa them vao cuoi file";
 	getchar();
@@ -183,29 +176,29 @@ void writeToEndFile(float A[], int &n, fstream &fileout)
 void updateValue(float A[], int &n)
 {
 	int id;
-	exportArray(A, n);
+	outputArray(A, n);
 	cout << "\nNhap so thu tu cua mang (i) can cap nhat: ";
 	cin >> id;
 	cout << "\nNhap A[" << id << "] = ";
 	cin >> A[id];
 }
 
-void readToFile(float A[], int &n, fstream &filein)
+void readToFile(float A[], int &n, fstream &fileInput)
 {
 	n = 0;
-	while (filein.eof() == false)
+	while (fileInput.eof() == false)
 	{
-		filein >> A[n];
+		fileInput >> A[n];
 		if (A[n] == '\n')
 			break;
 		n++;
-		filein.ignore();
+		fileInput.ignore();
 	}
 	cout << "Doc du lieu xong.";
 	getchar();
 }
 
-void exportArray(float A[], int n)
+void outputArray(float A[], int n)
 {
 	int dem = 1;
 	cout << "\n\tXuat cac phan tu hien co cua mang: ";

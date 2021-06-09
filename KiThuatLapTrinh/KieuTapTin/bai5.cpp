@@ -6,26 +6,26 @@
 using namespace std;
 #define MAX 100
 
-typedef struct SinhVien
+typedef struct ThongTin
 {
 	char hoLot[50], ten[50];
 	float diemToan, diemTin;
-} SV;
+} TN;
 
 void checkFile(fstream &file);
-void enterInfoSinhVien(SV &x);
-void nhapMangSV(SV A[], int &n);
-void exportInfoSinhVien(SV x);
-void xuatMangSV(SV A[], int n, int id);
-void writeToFile(SV A[], int n, fstream &outfile);
-void readToFile(SV A[], int n, fstream &infile);
-void update_info_sv(SV A[], int n, fstream &outfile);
+void enterInfoThongTin(TN &x);
+void nhapMang(TN A[], int &n);
+void outputInfoThongTin(TN x);
+void xuatMangSV(TN A[], int n, int id);
+void writeToFile(TN A[], int n, fstream &outfile);
+void readToFile(TN A[], int n, fstream &infile);
+void update_info_sv(TN A[], int n, fstream &outfile);
 
 int main()
 {
-	const char *address = "output//bai5.dat";
+	const char *address = "output/bai5.dat";
 	fstream input_file, output_file;
-	SV ArrayA[MAX], ArrayB[MAX];
+	TN ArrayA[MAX], ArrayB[MAX];
 	int n, luaChon;
 	bool check_nhap = false, check_xuat = false;
 	do
@@ -54,7 +54,7 @@ int main()
 			system("clear");
 			//system("cls");
 			cout << "\tNHAP DANH SACH SINH VIEN";
-			nhapMangSV(ArrayA, n);
+			nhapMang(ArrayA, n);
 			check_nhap = true;
 			getchar();
 			break;
@@ -134,7 +134,7 @@ void checkFile(fstream &file)
 	}
 }
 
-void enterInfoSinhVien(SV &x)
+void enterInfoThongTin(TN &x)
 {
 	cout << "\nNhap ho ten lot: ";
 	gets(x.hoLot);
@@ -148,16 +148,16 @@ void enterInfoSinhVien(SV &x)
 	cin.ignore(32767, '\n');
 }
 
-void nhapMangSV(SV A[], int &n)
+void nhapMang(TN A[], int &n)
 {
 	cout << "\nNhap so luong sinh vien: ";
 	cin >> n;
 	cin.ignore(32767, '\n');
 	for (int i = 0; i < n; i++)
-		enterInfoSinhVien(A[i]);
+		enterInfoThongTin(A[i]);
 }
 
-void exportInfoSinhVien(SV x)
+void outputInfoThongTin(TN x)
 {
 	cout << "|  " << x.hoLot << "\t";
 	cout << "|  " << x.ten << "\t";
@@ -165,26 +165,26 @@ void exportInfoSinhVien(SV x)
 	cout << "    |    " << x.diemTin << "    |";
 }
 
-void xuatMangSV(SV A[], int n, int id)
+void xuatMangSV(TN A[], int n, int id)
 {
 	cout << "\n\tXUAT THONG TIN SINH VIEN:";
 	cout << "\n|  STT  |  Ho ten lot\t|  Ten\t|  Diem Toan |  Diem Tin |";
 	if (id != 0)
 	{
 		cout << "\n| " << id + 1 << " ";
-		exportInfoSinhVien(A[id]);
+		outputInfoThongTin(A[id]);
 	}
 	else if (id == 0)
 	{
 		for (int i = 0; i < n; i++)
 		{
 			cout << "\n| " << i + 1 << " ";
-			exportInfoSinhVien(A[i]);
+			outputInfoThongTin(A[i]);
 		}
 	}
 }
 
-void writeToFile(SV A[], int n, fstream &outfile)
+void writeToFile(TN A[], int n, fstream &outfile)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -195,7 +195,7 @@ void writeToFile(SV A[], int n, fstream &outfile)
 	}
 }
 
-void readToFile(SV A[], int n, fstream &infile)
+void readToFile(TN A[], int n, fstream &infile)
 {
 	int i = 0;
 	while (infile.eof() == false)
@@ -211,7 +211,7 @@ void readToFile(SV A[], int n, fstream &infile)
 	}
 }
 
-void update_info_sv(SV A[], int n, fstream &outfile)
+void update_info_sv(TN A[], int n, fstream &outfile)
 {
 	int id = 0, luaChon;
 	bool id_check = false;
@@ -306,7 +306,7 @@ void update_info_sv(SV A[], int n, fstream &outfile)
 			else
 			{
 				cout << "\tCap nhat toan bo thong tin: ";
-				enterInfoSinhVien(A[id]);
+				enterInfoThongTin(A[id]);
 			}
 			getchar();
 			break;

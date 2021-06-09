@@ -13,7 +13,7 @@ void showCount(long Count[], long count2[], int n);
 
 int main()
 {
-	const char *address = "input//bai5.txt";
+	const char *address = "input/bai5.txt";
 	ifstream file_input;
 	file_input.open(address, ios_base::in);
 

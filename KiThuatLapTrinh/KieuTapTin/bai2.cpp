@@ -16,20 +16,19 @@ void checkFile(fstream &file);
 void enterInfoThongTin(TN &x);
 void writeInfoThongTin(TN x, fstream &fileout);
 void writeToFile(TN Arr[], fstream &fileout);
-void exportInfoThongTin(TN x);
+void outputInfoThongTin(TN x);
 void readInfoThongTin(TN &x, fstream &filein);
 void readToFile(TN A[], int &n, fstream &filein);
-void exportArray(TN A[], int n);
+void outputArray(TN A[], int n);
 
 int main()
 {
-	const char *address = "output//bai2.txt";
+	const char *pathInput = "input/bai2.txt";
 	fstream filein, fileout, file_addend;
 	TN Array_A[MAX], Array_B[MAX];
 	int n, luaChon;
 	do
 	{
-		system("clear");
 		cout << "========= MENU =========";
 		cout << "\n1. Viet vao tap tin moi";
 		cout << "\n2. Them du lieu vao tep tin";
@@ -43,26 +42,22 @@ int main()
 		switch (luaChon)
 		{
 		case 0:
-			system("clear");
 			cout << "\nKet thuc chuong trinh.";
 			break;
 		case 1:
-			system("clear");
-			fileout.open(address, ios::out);
+			fileout.open(pathInput, ios::out);
 			checkFile(fileout);
 			writeToFile(Array_A, fileout);
 			fileout.close();
 			break;
 		case 2:
-			system("clear");
-			file_addend.open(address, ios::app);
+			file_addend.open(pathInput, ios::app);
 			checkFile(file_addend);
 			writeToFile(Array_A, file_addend);
 			file_addend.close();
 			break;
 		case 3:
-			system("clear");
-			filein.open(address, ios::in);
+			filein.open(pathInput, ios::in);
 			checkFile(filein);
 			readToFile(Array_B, n, filein);
 			cout << "\nDoc du lieu";
@@ -70,12 +65,10 @@ int main()
 			filein.close();
 			break;
 		case 4:
-			system("clear");
-			exportArray(Array_B, n);
+			outputArray(Array_B, n);
 			getchar();
 			break;
 		default:
-			system("clear");
 			cout << "\nLua chon khong hop le.";
 			getchar();
 			break;
@@ -129,7 +122,7 @@ void writeToFile(TN Arr[], fstream &fileout)
 	}
 }
 
-void exportInfoThongTin(TN x)
+void outputInfoThongTin(TN x)
 {
 	cout << " |   " << x.name;
 	cout << "\t|  " << x.age;
@@ -160,12 +153,12 @@ void readToFile(TN A[], int &n, fstream &filein)
 	}
 }
 
-void exportArray(TN A[], int n)
+void outputArray(TN A[], int n)
 {
 	cout << "\n| STT |    Ho va ten\t|  Tuoi  |   Luong  |";
 	for (int i = 0; i < n; i++)
 	{
 		cout << "\n| " << i + 1;
-		exportInfoThongTin(A[i]);
+		outputInfoThongTin(A[i]);
 	}
 }

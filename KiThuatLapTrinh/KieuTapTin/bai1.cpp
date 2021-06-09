@@ -5,40 +5,51 @@
 #include <cmath>
 using namespace std;
 
-void readFile(float A[], int &n, ifstream &fileInput);
-void exportArray(float A[], int n);
+void checkFile(ifstream &file);
+void readFile(float A[], int &n, ifstream &inputFile);
+void outputArray(float A[], int n);
 float sum(float A[], int n);
 
 int main()
 {
-	ifstream fileInput;
-	const char *pathInput = "KieuTapTin/input/bai1.txt";
-	fileInput.open(pathInput, ios_base::in);
+	ifstream inputFile;
+	const char *inputPath = "input/bai1.txt";
+	inputFile.open(inputPath, ios_base::in);
 	float array[50];
 	int n;
-	readFile(array, n, fileInput);
-	exportArray(array, n);
+	checkFile(inputFile);
+	readFile(array, n, inputFile);
+	outputArray(array, n);
 	cout << "\nTong binh phuong cua cac so la: " << sum(array, n);
-	fileInput.close();
+	inputFile.close();
 	return 0;
 }
 
-void readFile(float A[], int &n, ifstream &fileInput)
+void checkFile(ifstream &file)
 {
-	if (fileInput.fail() == true)
+	if (file.fail() == true)
+	{
+		cout << "File khong ton tai!";
+		exit(0);
+	}
+}
+
+void readFile(float A[], int &n, ifstream &inputFile)
+{
+	if (inputFile.fail() == true)
 	{
 		cout << "File khong ton tai!";
 		exit(0);
 	}
 	n = 0;
-	while (fileInput.eof() == false)
+	while (inputFile.eof() == false)
 	{
-		fileInput >> A[n];
+		inputFile >> A[n];
 		n++;
 	}
 }
 
-void exportArray(float A[], int n)
+void outputArray(float A[], int n)
 {
 	for (int i = 0; i < n; i++)
 		cout << "\nA[" << i << "] = " << A[i];

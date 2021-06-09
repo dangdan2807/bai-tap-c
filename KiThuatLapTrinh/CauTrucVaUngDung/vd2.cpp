@@ -5,32 +5,32 @@
 using namespace std;
 #define MAX 100
 
-typedef struct SinhVien
+typedef struct ThongTin
 {
 	char name[MAX];
 	int id_sv;
 	float tk, gk, ck, th, dtb;
-} SV;
+} TN;
 
 void kiemTra(float &a);
 void print(int n);
-float average_score(SV a);
-void nhap1SV(SV &sinhVien);
-void xuat1SV(SV sinhVien, int i);
-void xuat1SV2(SV sinhVien);
-void nhapMangSV(SV A[], int &n);
-void xuatMangSV(SV A[], int n);
-int timSV(SV A[], int n);
-void xuatTTSvTimDuoc(SV A[], int n);
-void arrange_score(SV A[], int n);
+float average_score(TN a);
+void nhap1SV(TN &sinhVien);
+void xuat1SV(TN sinhVien, int i);
+void xuat1SV2(TN sinhVien);
+void nhapMang(TN A[], int &n);
+void xuatMangSV(TN A[], int n);
+int timSV(TN A[], int n);
+void xuatTTSvTimDuoc(TN A[], int n);
+void arrange_score(TN A[], int n);
 void hoc_lai(float x);
-void export_1_sv_ktlt(SV x, int i);
-void export_score_ktlt(SV A[], int n);
+void export_1_sv_ktlt(TN x, int i);
+void export_score_ktlt(TN A[], int n);
 
 int main()
 {
 	int n;
-	SV A[MAX];
+	TN A[MAX];
 	int lua_chon;
 	do
 	{
@@ -51,7 +51,7 @@ int main()
 		switch (lua_chon)
 		{
 		case 1:
-			nhapMangSV(A, n);
+			nhapMang(A, n);
 			//getchar(); getchar();
 			break;
 		case 2:
@@ -100,13 +100,13 @@ void print(int n)
 	cout << "\n";
 }
 
-float average_score(SV a)
+float average_score(TN a)
 {
 	float dtb = ((((2 * a.tk + 3 * a.gk + 5 * a.ck) / 10) * 2) + a.th) / 3;
 	return dtb;
 }
 
-void nhap1SV(SV &sinhVien)
+void nhap1SV(TN &sinhVien)
 {
 	cout << "Nhap ho va ten: ";
 	fflush(stdin);
@@ -130,7 +130,7 @@ void nhap1SV(SV &sinhVien)
 	sinhVien.dtb = average_score(sinhVien);
 }
 
-void xuat1SV(SV sinhVien, int i)
+void xuat1SV(TN sinhVien, int i)
 {
 	cout << "| " << i << " |";
 	cout << "\t" << sinhVien.name << "\t|";
@@ -138,7 +138,7 @@ void xuat1SV(SV sinhVien, int i)
 	cout << "\t" << sinhVien.dtb << "  |";
 }
 
-void xuat1SV2(SV sinhVien)
+void xuat1SV2(TN sinhVien)
 {
 	cout << "\nHo va ten: " << sinhVien.name;
 	cout << "\nMa sinh vien: " << sinhVien.id_sv;
@@ -149,7 +149,7 @@ void xuat1SV2(SV sinhVien)
 	cout << "\nDiem trung binh: " << sinhVien.dtb;
 }
 
-void nhapMangSV(SV A[], int &n)
+void nhapMang(TN A[], int &n)
 {
 	cout << "\tNHAP THONG TIN DANH SACH SINH VIEN:\n";
 	cout << "\nNhap So Luong Sinh Vien: ";
@@ -168,7 +168,7 @@ void nhapMangSV(SV A[], int &n)
 	//getchar();
 }
 
-void xuatMangSV(SV A[], int n)
+void xuatMangSV(TN A[], int n)
 {
 	cout << "\n\n\tXUAT DANH SACH THONG TIN SINH VIEN:\n";
 	print(65);
@@ -182,7 +182,7 @@ void xuatMangSV(SV A[], int n)
 	//getchar();
 }
 
-int timSV(SV A[], int n)
+int timSV(TN A[], int n)
 {
 	int msv;
 	cout << "\n\tTim thong tin sinh vien:\n";
@@ -199,7 +199,7 @@ int timSV(SV A[], int n)
 	return -1;
 }
 
-void xuatTTSvTimDuoc(SV A[], int n)
+void xuatTTSvTimDuoc(TN A[], int n)
 {
 	int id = timSV(A, n);
 	if (id == -1)
@@ -209,13 +209,13 @@ void xuatTTSvTimDuoc(SV A[], int n)
 	//getchar();
 }
 
-void arrange_score(SV A[], int n)
+void arrange_score(TN A[], int n)
 {
 	for (int i = 0; i < n; i++)
 		for (int j = i + 1; j < n; j++)
 			if (A[i].dtb < A[j].dtb)
 			{
-				SV temp = A[i];
+				TN temp = A[i];
 				A[i] = A[j];
 				A[j] = temp;
 			}
@@ -227,7 +227,7 @@ void hoc_lai(float x)
 		cout << "Hoc lai";
 }
 
-void export_1_sv_ktlt(SV x, int i)
+void export_1_sv_ktlt(TN x, int i)
 {
 	cout << "| " << i + 1;
 	cout << " | " << x.name << "\t";
@@ -242,7 +242,7 @@ void export_1_sv_ktlt(SV x, int i)
 	cout << "|";
 }
 
-void export_score_ktlt(SV A[], int n)
+void export_score_ktlt(TN A[], int n)
 {
 	cout << "\n\tDANH SACH DIEM THI KTLT:\n";
 	print(76);
